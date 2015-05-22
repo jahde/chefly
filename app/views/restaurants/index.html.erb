@@ -1,5 +1,11 @@
+<h1>Welcome to Chefly!</h1>
+<p>Cook like your favorite chef</p>
+<ul>
 <% @restaurants.each do |restaurant| %>
-<%= restaurant.name %><br>
-<%= restaurant.location %><br>
-<%= restaurant.category %>
+  <h5><%= restaurant.name %></h5>
+<p><%= restaurant.location %><br><br><p>
 <% end %>
+</ul>
+
+
+
