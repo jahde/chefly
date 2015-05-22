@@ -40,6 +40,7 @@ group :development, :test do
 end
 
 gem 'pg'
+gem 'httparty'
 
 group :test, :development do
   gem 'rspec-rails'

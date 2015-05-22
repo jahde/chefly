@@ -2,17 +2,9 @@ class Restaurant < ActiveRecord::Base
   has_many :dishes
 
 
-  def menu_api
+  def self.menu_api
+    response = HTTParty.get('http://api.locu.com/v1_0/venue/search/?api_key=4ce3d82c3063477c85dd0b1926750d78ed9de51d&postal_code=10009')
+      binding.pry
 
   end
 end
-
-curl -X POST https://api.locu.com/v2/venue/search -d '{
- "api_key" : "52894784aaa87819f3d54cf326d531ba814b412d",
- "fields" : [ "name", "location", "contact" ],
- "venue_queries" : [
-   {
-     "name" : "bistro central parc"
-   }
- ]
-}'
