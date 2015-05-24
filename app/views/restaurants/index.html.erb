@@ -9,7 +9,9 @@
 </div>
 <ul>
 <% @restaurants.each do |restaurant| %>
+<%= link_to "/restaurants/#{restaurant.id}" do %>
   <h5><%= restaurant.name %></h5>
+<% end %>
 <p><%= restaurant.location %><br><br><p>
 <% end %>
 </ul>

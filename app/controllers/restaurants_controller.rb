@@ -1,6 +1,13 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all
+    # @restaurants = Restaurant.all
+    narrowed_restaurants = []
+    Restaurant.all.each do |restaurant|
+      if restaurant.dishes.count > 0
+          narrowed_restaurants.push(restaurant) 
+      end
+    end
+    @restaurants = narrowed_restaurants
   end
 
   def create
@@ -11,7 +18,7 @@ class RestaurantsController < ApplicationController
     Restaurant.menu_api(zip)
     narrowed_restaurants = []
     Restaurant.all.each do |restaurant|
-      if restaurant.location.include?(zip)
+      if restaurant.location.include?(zip) 
         narrowed_restaurants.push(restaurant) 
       end
     end
@@ -20,13 +27,13 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-
+    @restaurant = Restaurant.find(params[:id])
   end
 
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:zip_code)
+    params.require(:restaurants).permit(:name, :location, :category)
   end
 
 end
