@@ -5,7 +5,7 @@ class Restaurant < ActiveRecord::Base
 
   def self.menu_api(zip_code)
     
-    response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=4ce3d82c3063477c85dd0b1926750d78ed9de51d&postal_code=#{zip_code}")
+    response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=API_KEY&postal_code=#{zip_code}")
       response["objects"].each do |restaurant|
         if (restaurant["has_menu"] == true) && restaurant["categories"].include?("restaurant")
           name = restaurant["name"]
@@ -22,7 +22,7 @@ class Restaurant < ActiveRecord::Base
 
 
   def get_dishes(menu_id, this_restaurant)
-     menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=4ce3d82c3063477c85dd0b1926750d78ed9de51d")
+     menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=API_KEY")
         dish_name = ""
         description = ""
         menus["objects"].each do |menu|
