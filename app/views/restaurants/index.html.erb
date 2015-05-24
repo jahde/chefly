@@ -1,11 +1,19 @@
 <h1>Welcome to Chefly!</h1>
 <p>Cook like your favorite chef</p>
+<div>
+<%= form_tag(controller: "restaurants", action: "get_zip", method: "get") do %>
+<%= label_tag(:zip_code, "Zipcode") %>
+<%= text_field_tag (:zip_code)%>
+<%= submit_tag ("Search Restaurants in your area") %>
+<% end %>
+</div>
 <ul>
 <% @restaurants.each do |restaurant| %>
   <h5><%= restaurant.name %></h5>
 <p><%= restaurant.location %><br><br><p>
 <% end %>
 </ul>
+
 
 
 

@@ -2,16 +2,17 @@ class Restaurant < ActiveRecord::Base
   has_many :dishes
 
 
-  def self.menu_api
+  def self.menu_api(zip_code)
     
-    response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=ENV[API_KEY]&postal_code=10009&has_menu=true")
+    response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=[API_KEY]&postal_code=#{zip_code}")
       response["objects"].each do |restaurant|
       if (restaurant["has_menu"] == true) && restaurant["categories"].include?("restaurant")
         name = restaurant["name"]
         location = restaurant["street_address"]
-        Restaurant.create(name: name,location: location)
+        zip = restaurant["postal_code"]
+        Restaurant.create(name: name,location: "#{location}, #{zip}")
         menu_id = restaurant["id"]
-        menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=ENV[API_KEY]")
+        menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=api_key=[API_KEY]")
       end 
       end
 
