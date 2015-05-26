@@ -34,3 +34,7 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+
+.thumbnail > img, .thumbnail a > img {
+  max-width: 500px;
+}
