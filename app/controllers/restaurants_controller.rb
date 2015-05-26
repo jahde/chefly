@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   def index
-    # Restaurant.data_dump
+    Restaurant.data_dump
     narrowed_restaurants = []
     Restaurant.all.each do |restaurant|
       if restaurant.dishes.count > 0
