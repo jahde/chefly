@@ -2,9 +2,9 @@
 <p>Cook like your favorite chef</p>
 <div>
 <%= form_tag(controller: "restaurants", action: "get_zip", method: "get") do %>
-<%= label_tag(:zip_code, "Zipcode") %>
-<%= text_field_tag (:zip_code)%>
-<%= submit_tag ("Search Restaurants in your area") %>
+<%= label_tag(:zip_code, "Neighborhoods") %>
+<%= select_tag "neighborhood", "<option>Central Harlem</option><option>Chelsea</option><option>East Harlem</option><option>Gramercy</option><option>SoHo</option><option>Lower Manhattan</option><option>Lower East Side</option><option>Upper East Side</option><option>Upper West Side</option><option>Washington Heights</option>".html_safe %>
+<%= submit_tag ("Search Restaurants in your neighborhood") %>
 <% end %>
 </div>
 <ul>

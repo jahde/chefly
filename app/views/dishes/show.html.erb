@@ -1,0 +1,5 @@
+<h1><%= @dish.name %></h1>
+<h5><%= @dish.description %></h5>
+<% if (@dish.ingredients.count > 0) %>
+  <p><%= @dish.ingredients %></p>
+<% end %>

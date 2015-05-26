@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   def index
-    # @restaurants = Restaurant.all
+    # Restaurant.data_dump
     narrowed_restaurants = []
     Restaurant.all.each do |restaurant|
       if restaurant.dishes.count > 0
@@ -14,15 +14,8 @@ class RestaurantsController < ApplicationController
   end
 
   def get_zip
-    zip = params[:zip_code]
-    Restaurant.menu_api(zip)
-    narrowed_restaurants = []
-    Restaurant.all.each do |restaurant|
-      if restaurant.location.include?(zip) 
-        narrowed_restaurants.push(restaurant) 
-      end
-    end
-    @restaurants = narrowed_restaurants
+    neighborhood = params[:neighborhood]
+    @restaurants = Restaurant.find_restaurant(neighborhood).flatten
     render 'index'
   end
 
