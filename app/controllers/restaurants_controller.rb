@@ -1,6 +1,5 @@
 class RestaurantsController < ApplicationController
   def index
-    #please run this! 
     narrowed_restaurants = []
     Restaurant.all.each do |restaurant|
       if restaurant.dishes.count > 0
@@ -8,6 +7,7 @@ class RestaurantsController < ApplicationController
       end
     end
     @restaurants = narrowed_restaurants
+    
   end
 
   def create

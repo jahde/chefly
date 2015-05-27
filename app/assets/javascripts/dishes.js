@@ -16,7 +16,7 @@ $(document).ready(function(){
                   var recipe_list = [];
                   for(var i = 0; i < 5; i++){
                     recipe_list.push(data.Results[i]["RecipeID"]);
-                    $("#dish-dish .thumbnail").append("<h4>"+data.Results[i]["Title"]+"</h4>"+"<br>");
+                    $("#dish-dish .thumbnail").append("<h4>"+data.Results[i]["Title"]+"</h4><button type='button' class='btn' id='recipe-vid'>View Recipe</button>"+"<br>");
                     var source = data.Results[i]["HeroPhotoUrl"];
                     $("#dish-dish .thumbnail").append("<img src="+source+" />");
                   }
