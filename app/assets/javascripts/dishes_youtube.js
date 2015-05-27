@@ -2,8 +2,9 @@ $(document).ready(function(){
 
 
   $('.thumbnail').click(function(something) {
+    //debugger;
     var txt = $(something.target).text();
-    debugger;
+    ajaxCall(txt);
     
 
   });
@@ -17,17 +18,17 @@ $(document).ready(function(){
     }
   });
 
-  function ajaxCall() {
-    var input = $("#text-field").val()
-    // your code will go here
+  function ajaxCall(recipe_name) {
+    var input = recipe_name
     $.ajax({
   type: "GET",
-  url: "/widget",
+  url: "/recipes",
   data: {search_keyword: input}
 })
-  .done(function(messageFromController) {
-    $("#search-results").html(messageFromController);
-  });
+  // .done(function(messageFromController) {
+  //   debugger;
+  //   $("#search-results").html(messageFromController);
+  // });
   }
 
 });
