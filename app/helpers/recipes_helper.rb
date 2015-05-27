@@ -29,7 +29,7 @@ module RecipesHelper
 
     def initialize(search_term)
       Yt.configure do |config|
-        config.api_key = ENV['DEVELOPER_KEY']
+        config.api_key = ENV['YOUTUBE_KEY']
       end
       @search_term = search_term
       @videos = Yt::Collections::Videos.new
