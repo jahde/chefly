@@ -1,9 +1,323 @@
-<h1><%= @restaurant.name %>'s Menu</h1>
+<body id="careers" class="lightnav animsition  pace-done" style="animation-duration: 0.9s; -webkit-animation-duration: 0.9s; opacity: 1;"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="-webkit-transform: translate3d(100%, 0px, 0px); transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+
+    <!-- ============================ Off-canvas navigation ============================ -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling" style="margin-right: -256px;">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="img/global/close.png" alt="Close">
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="index.html" class="animsition-link" title="Image Hero">Start</a></li>
+            <li><a href="index-video.html" class="animsition-link" title="Video Hero">Video Alt</a></li>
+            <li><a href="company.html" class="animsition-link" title="Company">Company</a></li>
+            <li><a href="values.html" class="animsition-link" title="Values">Values</a></li>
+            <li><a href="team.html" class="animsition-link" title="Team">Team</a></li>
+            <li><a href="careers.html" class="animsition-link" title="Careers">Careers</a></li>
+            <!-- Dropdown Menu -->
+            <li>
+                <a class="sb-toggle-submenu">Portfolio<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <li><a href="portfolio.html" class="animsition-link" title="Filter Portfolio">Filter Portfolio</a></li>
+                    <li><a href="portfolio-item.html" class="animsition-link" title="Portfolio Item">Portfolio Item</a></li>
+                </ul>
+            </li>
+            <li><a href="faq.html" class="animsition-link" title="FAQ's">FAQ's</a></li>
+            <li><a href="proposal.html" class="animsition-link" title="Start a Project">Start a Project</a></li>
+            <li><a href="contact.html" class="animsition-link" title="Contact Us">Contact Us</a></li>
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="blog.html" class="animsition-link" title="T&amp;C's">Read the Blog</a></li>
+            <li><a href="style-guide.html" class="animsition-link" title="Style Guide">Theme Style Guide</a></li>
+        </ul>
+        <ul class="sb-menu secondary">
+            <li><a href="terms-conditions.html" class="animsition-link" title="T&amp;C's">Terms &amp; Conditions</a></li>
+            <li><a href="privacy-policy.html" class="animsition-link" title="Privacy Policy">Privacy Statement</a></li>
+            <li><a href="press-kit.html" class="animsition-link" title="Press Kit">Press Kit</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================ END Off-canvas navigation ============================ -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site" style="min-height: 392px;">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+         <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top" style="top: 0px;">
+            <div class="navbar-inner lightnav-alt">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <!-- <div class="logo">
+                        <a href="index.html" title="Logo" class="animsition-link"><img src="img/global/logo.png" alt="Logo"></a>
+                    </div> -->
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="index.html" class="animsition-link">Welcome to </a></li>
+                            <li class="nolink"><span>Chefly</span></li>
+                            <!-- <li><a href="http://www.twitter.com/" title="Twitter" target="_blank"><i class="social-icon-twitter"></i></a></li>
+                            <li><a href="http://www.facebook.com/" title="Facebook" target="_blank"><i class="social-icon-facebook"></i></a></li>
+                            <li><a href="http://www.instagram.com/" title="Instagram" target="_blank"><i class="social-icon-instagram"></i></a></li>
+                            <li class="nolink"><span>Index</span></li> -->
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">Learn More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="learn More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ END Header & Logo bar =========================== -->
+
+        <!-- ============================ Page Header =========================== -->
+
+        <section id="page-header" class="element-img scrollme" style="background-image: url(<%= image_url("prep.jpg") %>)">
+            <div class="container">
+                <div class="row boost">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 vertical-align text-center">
+                        <div class="animateme center-me" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="120" style="opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                            <h1><span><%= @restaurant.name %>'s Menu</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerfade beige-dk" style="opacity: 0.9;"></div>
+        </section>
+        
+        <!-- ============================ END Page Header =========================== -->
+
+        <!-- ============================ Page tabs =========================== -->
+
+        <section id="pagetabs" class="boost">
+            <div class="container">
+
+                <!-- ============================ Page tabs =========================== -->
+
+                <!-- <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <ul class="row page-nav">
+                            <li class="col-xs-6 col-sm-3 col-md-3 col-lg-3"><a href="company.html" class="animsition-link" title="Company"><i class="icon-basic-book-pencil"></i>Company</a></li>
+                            <li class="col-xs-6 col-sm-3 col-md-3 col-lg-3"><a href="values.html" class="animsition-link" title="Values"><i class="icon-basic-heart"></i>Values</a></li>
+                            <li class="col-xs-6 col-sm-3 col-md-3 col-lg-3"><a href="team.html" class="animsition-link" title="Team"><i class="icon-basic-life-buoy"></i>Team</a></li>
+                            <li class="col-xs-6 col-sm-3 col-md-3 col-lg-3 active"><a href="careers.html" class="animsition-link" title="Careers"><i class="icon-basic-globe"></i>Careers <span class="badge jobs">4</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+ -->
+                <!-- ============================ END Page tabs =========================== -->
+
+                <!-- ============================ Careers =========================== -->
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 titleblock text-center">
+                        <h2 class="section-heading">Please select a menu item</h2>
+                        <p>Clicking on a menu item will take you to its similar recipe page</p>
+                    </div>
+                </div>
+                
+            
+
+                <!-- <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
+                                <img src="img/careers/box.jpg" class="img-responsive" alt="Image">
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
+                                <div class="apply">
+                                    <h4>Think you've got what it takes?</h4>
+                                    <h5><a href="contact.html" class="animsition-link" title="Apply Today">apply today</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 apply-meta">
+                            <p>That's great! Head on over to our <a href="contact.html" class="animsition-link" title="Contact" style="color:#fff;text-decoration:underline">contact</a> page and send us an email to introduce yourself.</p>
+                            <p>Need to send a CV? No problem. Please send your work history across to <span style="color:#fff;text-decoration:underline">email@address.com</span>, making sure you include a covering letter, for the attention of Mr. Smith.</p>
+                        </div>
+
+                   </div> 
+                </div>-->
+
+            </div>
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+          <hr>
+              <div class="row">
+                <% @restaurant.dishes.each do |dish| %>
+                  <div class="col-sm-4 col-md-4 credit wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; -webkit-animation-delay: 0.3s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp;">
+                      <h5>
+                        <%= link_to "/restaurants/#{@restaurant.id}/dishes/#{dish.id}" do %>
+                          <%= dish.name %><br>
+                        <% end %></h5>
+                      <p class="description"><%= dish.description %></p>
+                  </div>
+                 <% end %>
+              </div>
+             
+              <!-- <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div> -->
+          </div>
+          <!-- // .col-md-8 .col-md-offset-2 -->
+        </div>
+
+     
+
+        <!-- ============================ END Page tabs =========================== -->
+
+        <!-- ============================ Hire Us =========================== -->
+
+        <section id="hire-us" class="beige-dk">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 class="headspc">Ready to begin your project?</h4>
+                                <p class="copyspc">Find your professional and begin working within 48 hours.</p>
+                            </div>
+                            <!-- Go to proposal.html link -->
+                            <div class="col-md-4">              
+                                <a href="proposal.html" class="custom-button animsition-link" title="Proposal">Start Your Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ END Hire Us =========================== -->
+
+        <!-- ============================ Footer =========================== -->
+
+        <footer>
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>Address</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <p class="m_14">aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                        <div class="address">
+                            <p><i class="icon-basic-geolocalize-01"></i> 500 Lorem Ipsum Dolor Sit,</p>
+                            <p><i class="icon-basic-life-buoy"></i> Phone:(00) 222 666 444</p>
+                            <p><i class="icon-basic-mail-multiple"></i> Email: <span>help[at]email.com</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>Snapshot</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <p class="m_14">aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commod consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>Quick Links</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <div class="footer_lists">
+                            <ul class="list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Screenshots</a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                            <ul class="list1">
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">figures</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>Just Another Area</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <p class="m_14">Another area to add some of your most vital content or links. You can use this area to show any content globally across the site.</p>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="copy">
+                        <p>
+                            © 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>-2015, Company. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li><a href="http://twitter.com/" target="_blank"><i class="social-icon-twitter"></i></a></li>
+                            <li><a href="http://facebook.com/" target="_blank"><i class="social-icon-facebook"></i></a></li>
+                            <li><a href="http://instagram.com/" target="_blank"><i class="social-icon-instagram"></i></a></li>
+                            <li><a href="http://linkedin.com/" target="_blank"><i class="social-icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- ============================ END Footer =========================== -->
+
+        <!-- //////////////////////////////////////////////////////////// -->
+        <!-- Load our scripts -->
+
+        <script src="js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load first -->
+        <script src="js/scripts.js"></script><!-- Theme scripts -->
+
+    </div>
+    <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
+
+
+<div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 9px; z-index: 100; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 1; display: block; background: rgba(255, 255, 255, 0.701961);"><div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 9px; height: 46px; border: 0px solid rgb(32, 32, 32); border-radius: 5px; background-color: rgb(21, 21, 21); background-clip: padding-box;"></div></div></body>
+
+
+
+
+<!--  ORIGINAL RAILS APP CODE BELOW -->
+
+
+<!-- 
 <ul>
-<% @restaurant.dishes.each do |dish| %>
-<%= link_to "/restaurants/#{@restaurant.id}/dishes/#{dish.id}" do %>
-  <h5><%= dish.name %></h5>
-<% end %>
-<p><%= dish.description %>
-<% end %>
+
 </ul>
+ -->

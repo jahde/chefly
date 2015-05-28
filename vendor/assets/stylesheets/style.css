@@ -77,7 +77,7 @@ body {
 }
 p {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	color: #666;
+	color: #a0a0a0;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
@@ -1444,6 +1444,7 @@ span.sb-caret { /* Caret Down */
 	line-height: 32px;
 	color: #fff;
 	margin-bottom: 15px;
+	text-align: left;
 }
 #featured .byline {
 	font-size: 18px;
@@ -3293,4 +3294,22 @@ footer .footer_bottom {
 	background-image:    -moz-linear-gradient(top, rgb(32,141,146), rgb(12,225,232));
 	background-image:      -o-linear-gradient(top, rgb(32,141,146), rgb(12,225,232));
 	background-image:         linear-gradient(to bottom, rgb(32,141,146), rgb(12,225,232));
+}
+
+/* CHEFLY CSS */
+
+.titleblock h2 .section-heading {
+	padding: 10px 0px 0px 0px;
+	color: #ffba43;
+}
+
+.description {
+	color: #b9b9b9;
+	font-family: 'Georgia', sans-serif;
+	font-style: italic;
+}
+
+.row > .credit {
+	padding: 60px 0px 60px 0px;
+	height: 200px;
 }
