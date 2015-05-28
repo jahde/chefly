@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
 
  
-  root 'restaurants#index'
+  root 'home#index'
 end
