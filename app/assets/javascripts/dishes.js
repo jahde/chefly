@@ -21,7 +21,7 @@ $(document).ready(function(){
                     $("#dish-dish .thumbnail").append("<img src="+source+" />");
                   }
                   recipe_list.forEach(function(entry){
-                    // fetchRecipeJson(entry);
+                     fetchRecipeJson(entry);
                   })
               }
           });
@@ -38,6 +38,18 @@ $(document).ready(function(){
                cache: false,
                url: url,
                success: function (data) {
+                  debugger;
+                  var ingredientsArray = [];
+                  var name = data["Title"];
+                  var directions = data["Instructions"];
+                  var category = data["Category"];
+                  var ingredients = data["Ingredients"];
+                  ingredients.forEach(function(ingredient){
+                    ingredientsArray.push(ingredient["Name"])
+                  });
+                  var stringIngredients = ingredientsArray.join(", ");
+                  $.post('/recipes', { name: name, directions: directions, category: category, ingredients: stringIngredients });
+                  
                   // $("#dish-dish").html(data.Instructions);
                   // debugger;
                   // $("#dish-dish").html(data.Ingredients[0]["Name"])

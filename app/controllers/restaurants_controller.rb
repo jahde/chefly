@@ -1,5 +1,8 @@
 class RestaurantsController < ApplicationController
   def index
+    # if current_user == nil
+    #   redirect_to sign_in_path
+    # end
     narrowed_restaurants = []
     Restaurant.all.each do |restaurant|
       if restaurant.dishes.count > 0
