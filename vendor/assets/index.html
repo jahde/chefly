@@ -81,6 +81,7 @@
     <![endif]-->
 
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="http://vast-engineering.github.io/jquery-popup-overlay/jquery.popupoverlay.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
 
@@ -132,7 +133,7 @@
             <li><a href="press-kit.html" class="animsition-link" title="Press Kit">Press Kit</a></li>
         </ul>
     </div>
-    
+
     <!-- ============================ END Off-canvas navigation =========================== -->
 
     <!-- ============================ #sb-site Main Page Wrapper =========================== -->
@@ -664,10 +665,10 @@
 
         <!-- //////////////////////////////////////////////////////////// -->
         <!-- Load our scripts -->
-        
+
         <!-- Resizable 'on-demand' full-height hero -->
         <script type="text/javascript">
-            
+
             var resizeHero = function () {
                 var hero = $(".cover,.heightblock"),
                     window1 = $(window);
@@ -675,9 +676,9 @@
                     "height": window1.height()
                 });
             };
-            
+
             resizeHero();
-            
+
             $(window).resize(function () {
                 resizeHero();
             });
@@ -706,6 +707,6 @@
 
     </div>
     <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
-    
+
 </body>
 </html>
