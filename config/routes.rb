@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   post '/sign-up', to: 'users#create'
 
   post '/favorites', to: 'recipes#create'
+  get '/favorites', to: 'recipes#favorites'
+  get '/youtube', to: 'recipes#youtube'
 
   get '/sign-in', to: 'sessions#new'
   post '/sign-in', to: 'sessions#create'

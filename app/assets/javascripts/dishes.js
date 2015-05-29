@@ -18,7 +18,7 @@ $(document).ready(function(){
                     var recipe_id = data.Results[i]["RecipeID"];
                     recipe_list.push(data.Results[i]["RecipeID"]);
                     $("#dish-dish .thumbnail").append("<button class='test-recipe-ingredient'><h4 title="+recipe_id+">"+data.Results[i]["Title"]+"<br>"+"</button>"+"<br>");
-                    $("#dish-dish .thumbnail").append("<br><button type='button' class='btn' id='recipe-fav'>Add Recipe</button>"+"<br>");
+                    $("#dish-dish .thumbnail").append("<br><button type='button' class='btn' id='recipe-fav-" + recipe_id + "'>Add Recipe</button>"+"<br>");
                     var source = data.Results[i]["HeroPhotoUrl"];
                     $("#dish-dish .thumbnail").append("<br><img src="+source+" /><br>");
                   }
@@ -40,7 +40,7 @@ $(document).ready(function(){
                cache: false,
                url: url,
                success: function (data) {
-                $('#dish-dish .thumbnail').on('click', "#recipe-fav", function(something) {
+                $('#dish-dish .thumbnail').on('click', "#recipe-fav-" + recipeID, function(something) {
                   // $('#recipe-fav').click(function(something){
                     var ingredientsArray = [];
                     var name = data["Title"];
