@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :neighborhoods
+
   resources :recipes, only: [:show, :index]
 
   resources :restaurants do
