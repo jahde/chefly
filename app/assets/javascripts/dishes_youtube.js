@@ -1,11 +1,10 @@
 $(document).ready(function(){
 
 
-  // $('.thumbnail').click(function(something) {
-  //   debugger;
-  //   var txt = $(something.target).text();
-  //   ajaxCall(txt);
-  // });
+  $('#dish-dish .thumbnail').on('click', ".test-recipe-ingredient", function(something) {
+    var txt = $(something.target).text();
+    ajaxCall(txt);
+  });
 
   // user hits enter while on the input field
   $('#text-field').keypress(function(e){

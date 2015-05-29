@@ -40,7 +40,7 @@ $(document).ready(function(){
                cache: false,
                url: url,
                success: function (data) {
-                  // $('#recipe-fav').click(function(something){
+                  $('#recipe-fav').click(function(something){
                     var ingredientsArray = [];
                     var name = data["Title"];
                     var directions = data["Instructions"];
@@ -51,7 +51,7 @@ $(document).ready(function(){
                     });
                     var stringIngredients = ingredientsArray.join(", ");
                     $.post('/recipes', { name: name, directions: directions, category: category, ingredients: stringIngredients });
-                  // })
+                  })
                   }
                });
              }
