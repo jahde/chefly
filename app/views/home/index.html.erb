@@ -173,11 +173,10 @@
             <!-- RECTANGLE NEIGHBORHOOD -->
             
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 featured-item element-img wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft; background-image: url(<%= image_url(neighborhood.image_url) %>);">
-                <!-- <a href="portfolio-item.html" title="View Work" class="meta animsition-link"> -->
+                
                 <%= link_to(neighborhood, title: neighborhood.name, class:"meta animsition-link") do %>
                     <span class="title"><%= neighborhood.name %></span>
                     <hr class="byline-accent">
-                <!-- </a> -->
                 <% end %>
             </div>
 
@@ -185,11 +184,10 @@
 
             <!-- SQUARE NEIGHBORHOOD -->
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; -webkit-animation-delay: 0.2s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url(neighborhood.image_url) %>);">
-                <!-- <a href="portfolio-item.html" title="View Work" class="meta animsition-link"> -->
+                
                 <%= link_to(neighborhood, title: neighborhood.name, class:"meta animsition-link") do %>
                     <span class="title"><%= neighborhood.name %></span>
                     <hr class="byline-accent">
-                <!-- </a> -->
                 <% end %>
             </div>            
             <% end %>
