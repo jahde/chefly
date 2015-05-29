@@ -2,6 +2,8 @@ require 'yaml'
 
 class Restaurant < ActiveRecord::Base
   has_many :dishes
+  belongs_to :neighborhood
+
   attr_accessor :this_restaurant
 
   BANNED_WORDS = ["bar", "drinks", "beverages", "wine", "beer", "vino", "desserts", "dolci", "tea", "coffee", "artiginali", "sweet wine", "port", "grappa", "madeira"]
