@@ -1,8 +1,7 @@
 // test
 $(document).ready(function(){
   function getRecipeJson() {
-          var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
-          // var titleKeyword = "latin egg wrap";
+          var apiKey = "dvx8W4XdSOxw9en1G8benXRZ8n3rGrMH";
           var titleKeyword = $('h1').text().toLowerCase();
           var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&any_kw="
                     + titleKeyword
@@ -18,7 +17,8 @@ $(document).ready(function(){
                     // add hidden recipe id attribute
                     var recipe_id = data.Results[i]["RecipeID"];
                     recipe_list.push(data.Results[i]["RecipeID"]);
-                    $("#dish-dish .thumbnail").append("<h4 title="+recipe_id+">"+data.Results[i]["Title"]+"</h4><button type='button' class='btn' id='recipe-vid'>View Recipe</button>"+"<br>");
+                    $("#dish-dish .thumbnail").append("<button class='test-recipe-ingredient'><h4 title="+recipe_id+">"+data.Results[i]["Title"]+"<br>"+"</button>"+"<br>");
+                    $("#dish-dish .thumbnail").append("<h4 title="+recipe_id+">"+data.Results[i]["Title"]+"<br>"+"</h4><button type='button' class='btn' id='recipe-fav'>Add Recipe</button>"+"<br>");
                     var source = data.Results[i]["HeroPhotoUrl"];
                     $("#dish-dish .thumbnail").append("<img src="+source+" />");
                   }
@@ -31,7 +31,7 @@ $(document).ready(function(){
       getRecipeJson();
 
       function fetchRecipeJson(iD) {
-      var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
+      var apiKey = "dvx8W4XdSOxw9en1G8benXRZ8n3rGrMH";
       var recipeID = iD;
       var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
       $.ajax({
@@ -40,20 +40,18 @@ $(document).ready(function(){
                cache: false,
                url: url,
                success: function (data) {
-                  debugger;
-                  var ingredientsArray = [];
-                  var name = data["Title"];
-                  var directions = data["Instructions"];
-                  var category = data["Category"];
-                  var ingredients = data["Ingredients"];
-                  ingredients.forEach(function(ingredient){
-                    ingredientsArray.push(ingredient["Name"])
-                  });
-                  var stringIngredients = ingredientsArray.join(", ");
-                  $.post('/recipes', { name: name, directions: directions, category: category, ingredients: stringIngredients });
-                  // $("#dish-dish").html(data.Instructions);
-                  // debugger;
-                  // $("#dish-dish").html(data.Ingredients[0]["Name"])
+                  // $('#recipe-fav').click(function(something){
+                    var ingredientsArray = [];
+                    var name = data["Title"];
+                    var directions = data["Instructions"];
+                    var category = data["Category"];
+                    var ingredients = data["Ingredients"];
+                    ingredients.forEach(function(ingredient){
+                      ingredientsArray.push(ingredient["Name"])
+                    });
+                    var stringIngredients = ingredientsArray.join(", ");
+                    $.post('/recipes', { name: name, directions: directions, category: category, ingredients: stringIngredients });
+                  // })
                   }
                });
              }

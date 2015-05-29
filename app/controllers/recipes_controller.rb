@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  # skip_before_action :verify_authenticity_token
 
   def index
     keyword = params[:search_keyword]
@@ -10,7 +11,7 @@ class RecipesController < ApplicationController
 
   def create
     binding.pry
-    Recipe.create(name: params[:name], directions: params[:directions], category: params[:category])
+    Recipe.create(name: params[:name], directions: params[:directions], category: params[:category], )
   end
 
 end

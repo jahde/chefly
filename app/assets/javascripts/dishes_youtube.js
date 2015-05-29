@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
 
-  $('.thumbnail').click(function(something) {
-    var txt = $(something.target).text();
-    ajaxCall(txt);
-  });
+  // $('.thumbnail').click(function(something) {
+  //   debugger;
+  //   var txt = $(something.target).text();
+  //   ajaxCall(txt);
+  // });
 
   // user hits enter while on the input field
   $('#text-field').keypress(function(e){

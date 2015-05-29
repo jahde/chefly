@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-  $('.thumbnail').click(function(something) {
+  $('#dish-dish .thumbnail').on('click', ".test-recipe-ingredient", function(something) {
+    debugger;
     var recipe_id = something.target["title"];
     fetchRecipeJson(recipe_id);
   });
@@ -15,7 +16,7 @@ $(document).ready(function(){
   });
 
   function fetchRecipeJson(iD) {
-    var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
+    var apiKey = "dvx8W4XdSOxw9en1G8benXRZ8n3rGrMH";
     var recipeID = iD;
     var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
     $.ajax({
