@@ -35,7 +35,6 @@ class Restaurant < ActiveRecord::Base
         end
       end
     end
-
   end
 
   def self.find_restaurant(neighborhood)
