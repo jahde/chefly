@@ -8,4 +8,9 @@ class RecipesController < ApplicationController
     end
   end
 
+  def create
+    binding.pry
+    Recipe.create(name: params[:name], directions: params[:directions], category: params[:category])
+  end
+
 end

@@ -22,21 +22,11 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
+        <% if current_user == nil %>
+        <li class="active"><%= link_to 'Sign-in', sign_in_path%><span class="sr-only">(current)</span></a></li>
+        <% else %>
+        <li><%= link_to 'Sign-out', sign_out_path, method: :delete%></li>
+        <% end %>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
       </ul>
@@ -47,12 +37,15 @@
 <body>
 <div>
 <center>
+<% if current_user %>
+<h5>You're signed in <%= current_user.name %></h5>
+<% end %>
 <%= yield %>
 </center>
 </div>
 
 </body>
 <footer>
-<p>Made with <3 by Dace, Jahde and Simone</p>
+<p>Made with <3 by Dace, Jahde, Simone and Jack</p>
 </footer>
 </html>

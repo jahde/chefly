@@ -1,0 +1,29 @@
+<% if @user.errors.any? %>
+<ul>
+  <% @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+<h1>Sign up!</h1>
+<h5>Make an account to save your favorite recipes</h5>
+
+<%= form_for @user, url: sign_up_path do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+  </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <%= f.submit "Create your account!" %>
+<% end %>
