@@ -7,28 +7,33 @@ class Restaurant < ActiveRecord::Base
   attr_accessor :this_restaurant
 
   BANNED_WORDS = ["bar", "drinks", "beverages", "wine", "beer", "vino", "desserts", "dolci", "tea", "coffee", "artiginali", "sweet wine", "port", "grappa", "madeira"]
-  NEIGHBORHOODS = {
-    central_harlem: [10026, 10027, 10030, 10037, 10039],
-    chelsea: [10001, 10011, 10018, 10019, 10020, 10036],
-    east_harlem: [10029, 10035],
-    gramercy: [10010, 10016, 10017, 10022],
-    soho: [10012, 10013, 10014],
-    lower_manhattan: [10004, 10005, 10006, 10007, 10038, 10280],
-    lower_east_side: [10002, 10003, 10009],
-    upper_east_side: [10021, 10028, 10044, 10065, 10075, 10128],
-    upper_west_side: [10023, 10024, 10025],
-    washington_heights: [10031, 10032, 10033, 10034, 10040]
-  }
+
+  # NEIGHBORHOODS = {
+  #   central_harlem: [10026, 10027, 10030, 10037, 10039],
+  #   chelsea: [10001, 10011, 10018, 10019, 10020, 10036],
+  #   east_harlem: [10029, 10035],
+  #   gramercy: [10010, 10016, 10017, 10022],
+  #   soho: [10012, 10013, 10014],
+  #   lower_manhattan: [10004, 10005, 10006, 10007, 10038, 10280],
+  #   lower_east_side: [10002, 10003, 10009],
+  #   upper_east_side: [10021, 10028, 10044, 10065, 10075, 10128],
+  #   upper_west_side: [10023, 10024, 10025],
+  #   washington_heights: [10031, 10032, 10033, 10034, 10040]
+  # }
 
   def self.data_dump
-    NEIGHBORHOODS.each do |hood,value|
-      value.each do |zip|
+    @neighborhoods = Neighborhood.all
+    # NEIGHBORHOODS.each do |hood,value|
+    @neighborhoods.each do |neighborhood|
+      # value.each do |zip|
+      neighborhood.zipcodes.each do |zip|
         response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=#{ENV['API_KEY']}&postal_code=#{zip}")
         response["objects"].each do |restaurant|
           if (restaurant["has_menu"] == true) && restaurant["categories"].include?("restaurant")
             name = restaurant["name"]
             zip = restaurant["postal_code"]
-            this_restaurant = Restaurant.create(name: name,location: "#{zip}")
+            neighborhood_id = neighborhood.id
+            this_restaurant = Restaurant.create(name: name,location: "#{zip}", neighborhood_id: neighborhood_id)
             menu_id = restaurant["id"]
             this_restaurant.get_dishes(menu_id, this_restaurant)
           end 
@@ -38,13 +43,17 @@ class Restaurant < ActiveRecord::Base
   end
 
   def self.find_restaurant(neighborhood)
-    arr = NEIGHBORHOODS[neighborhood.downcase.split(" ").join("_").to_sym]
-    list = []
-    arr.each do |zip|
-      restaurant = Restaurant.where(location: zip)
-      list.push(restaurant)
-    end
-    list
+    # arr = NEIGHBORHOODS[neighborhood.downcase.split(" ").join("_").to_sym]
+    # list = []
+    # arr.each do |zip|
+    #   restaurant = Restaurant.where(location: zip)
+    #   list.push(restaurant)
+    # end
+    # list
+    @neighborhoods = Neighborhood.all
+
+    
+    # We want all restaurants that belong to this neighborhood
   end
 
 
@@ -74,6 +83,5 @@ class Restaurant < ActiveRecord::Base
             end
           end
         end
-
   end
 end
