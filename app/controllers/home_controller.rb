@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
 
   def index
+    @neighborhoods = Neighborhood.all
+
     narrowed_restaurants = []
     Restaurant.all.each do |restaurant|
       if restaurant.dishes.count > 0

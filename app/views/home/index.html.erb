@@ -1,6 +1,7 @@
 <body id="index-video" class="lightnav animsition  wallpaper-inititalized pace-done" style="animation-duration: 0.9s; -webkit-animation-duration: 0.9s; opacity: 1;"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="-webkit-transform: translate3d(100%, 0px, 0px); transform: translate3d(100%, 0px, 0px);">
   <div class="pace-progress-inner"></div>
 </div>
+
 <div class="pace-activity"></div></div>
 
     <!-- ============================ Off-canvas navigation =========================== -->
@@ -164,86 +165,32 @@
         </div>
     </div>
     <div class="container-fluid">
+        
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; -webkit-animation-delay: 0.2s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("flatiron.jpg") %>);">
+          <% @neighborhoods.each do |neighborhood| %>
+            <% if neighborhood.id == 4 || neighborhood.id == 10 %>
+            
+            <!-- RECTANGLE NEIGHBORHOOD -->
+            
+            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 featured-item element-img wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft; background-image: url(<%= image_url(neighborhood.image_url) %>);">
+                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
+                    <span class="title"><%= neighborhood.name %></span>
+                    <hr class="byline-accent">
+                </a>
+            </div>
+
+            <% else %>
+
+            <!-- SQUARE NEIGHBORHOOD -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; -webkit-animation-delay: 0.2s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url(neighborhood.image_url) %>);">
                 
                 <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Chelsea</span>
+                    <span class="title"><%= neighborhood.name %></span>
                     <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
                 </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("harlem_central.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Central Harlem</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; -webkit-animation-delay: 0.6s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("harlem_east.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Harlem (East)</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 featured-item element-img wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft; background-image: url(<%= image_url("grammercy.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Gramercy</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("soho.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Soho</span>
-                    <hr class="byline-accent"><br>
-                    <!-- <%#= image_tag("utensils.png", class: "icon-basic-spread-text", height: 40, width: 40) %> -->
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-
-            
-
-            
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; -webkit-animation-delay: 0.6s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("tribeca.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Lower Manhattan</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; -webkit-animation-delay: 0.2s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("east_village.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Lower East Side</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("ues.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Upper East Side</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; -webkit-animation-delay: 0.6s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url("uws.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Upper West Side</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 featured-item element-img wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft; background-image: url(<%= image_url("flatiron.jpg") %>);">
-                <a href="portfolio-item.html" title="View Work" class="meta animsition-link">
-                    <span class="title">Washington Heights</span>
-                    <hr class="byline-accent">
-                    <!-- <span class="byline">A project that uses the latest design techniques and techologies, with user-first approach.</span> -->
-                </a>
-            </div>
-            
+            </div>            
+            <% end %>
+        <% end %>
         </div>
     </div>
 </section>
