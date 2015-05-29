@@ -1,0 +1,24 @@
+JS Plugins
+==========
+
+All plugins used for the various effects and functions that Alaska comprises of, (found in [root]/js), are released under GPL/MIT/Open Source, and are therefore free to use. License headers must be kept in place for the relevant attribution to their respective authors.
+
+Here’s a full list of the plugins used, and url’s of where to download or read documentation.
+
+1. Twitter Bootstrap - http://getbootstrap.com/
+2. Lightbox for Bootstrap - http://github.com/djinteractive/Lightbox-for-Bootstrap/
+3. WOW Animations - http://mynameismatthieu.com/WOW/
+4. CSS Animations from - http://github.com/daneden/animate.css/
+5. Page transitions - http://git.blivesta.com/animsition/fade-down-sm/
+6. jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+7. jQuery FlexSlider v2.2.2 - http://www.woothemes.com/flexslider/
+8. Wallpaper - http://formstone.it/wallpaper/
+9. MixItUp - http://www.mixitup.io/
+10. AutoHiding Navbar - http://www.virtuosoft.eu/code/bootstrap-autohidingnavbar/
+11. Page scrolling effects - http://scrollme.nckprsn.com
+12. Modernizr 2.8.3 - http://modernizr.com/ (See file header for build package details)
+13. Pace page loader - http://github.hubspot.com/pace/docs/welcome/
+14. Slidebars 0.10.2 - http://plugins.adchsm.me/slidebars/
+15. Dynamic Ajax powered Mailchimp forms -  https://github.com/scdoshi/jquery-ajaxchimp
+16. Contact & Proposal contact form submissions - http://ReactiveRaven.github.com/jqBootstrapValidation/
+17. Aperta NiceScroll - https://github.com/inuyaksa/jquery.nicescroll

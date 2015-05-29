@@ -1,0 +1,11 @@
+JS/PHP Includes
+===============
+
+All plugins used for the various effects and functions that Alaska comprises of, (found in [root]/js), are released under GPL/MIT/Open Source, and are therefore free to use. License headers must be kept in place for the relevant attribution to their respective authors.
+
+Here’s a full list of the plugins used, and url’s of where to download or read documentation.
+
+1. Dynamic Ajax powered Mailchimp forms - https://github.com/scdoshi/jquery-ajaxchimp
+2. Social sharing buttons for blog posts - http://sharrre.com
+3. Contact & Proposal contact form submissions - http://ReactiveRaven.github.com/jqBootstrapValidation/
+4. ’background-size: cover’ support for IE8 - https://github.com/louisremi/background-size-polyfill

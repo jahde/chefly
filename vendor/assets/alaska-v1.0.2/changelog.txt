@@ -1,0 +1,18 @@
+* Changelog for Alaska Theme Package *
+* Current Stable Release: v1.0.2 *
+========================================
+
+Note: Dates are in British formatting, eg. DD/MM/YYYY
+
+========================================
+
+** Official Release **
+
+Version: 1.0.2
+Released: 02/02/2015
+
+** Official Release **
+
+By Themes Collective
+http://themescollective.com/
+help@themescollective.com
