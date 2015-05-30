@@ -1,7 +1,7 @@
 // test
 $(document).ready(function(){
   function getRecipeJson() {
-          var apiKey = "dvx8W4XdSOxw9en1G8benXRZ8n3rGrMH";
+          var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
           var titleKeyword = $('h1').text().toLowerCase();
           var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&any_kw="
                     + titleKeyword
@@ -18,9 +18,9 @@ $(document).ready(function(){
                     var recipe_id = data.Results[i]["RecipeID"];
                     recipe_list.push(data.Results[i]["RecipeID"]);
                     $("#dish-dish .thumbnail").append("<button class='test-recipe-ingredient'><h4 title="+recipe_id+">"+data.Results[i]["Title"]+"<br>"+"</button>"+"<br>");
-                    $("#dish-dish .thumbnail").append("<h4 title="+recipe_id+">"+data.Results[i]["Title"]+"<br>"+"</h4><button type='button' class='btn' id='recipe-fav'>Add Recipe</button>"+"<br>");
+                    $("#dish-dish .thumbnail").append("<br><button type='button' class='btn' id='recipe-fav-" + recipe_id + "'>Add Recipe</button>"+"<br>");
                     var source = data.Results[i]["HeroPhotoUrl"];
-                    $("#dish-dish .thumbnail").append("<img src="+source+" />");
+                    $("#dish-dish .thumbnail").append("<br><img src="+source+" /><br>");
                   }
                   recipe_list.forEach(function(entry){
                      fetchRecipeJson(entry);
@@ -31,7 +31,7 @@ $(document).ready(function(){
       getRecipeJson();
 
       function fetchRecipeJson(iD) {
-      var apiKey = "dvx8W4XdSOxw9en1G8benXRZ8n3rGrMH";
+      var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
       var recipeID = iD;
       var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
       $.ajax({
@@ -40,7 +40,8 @@ $(document).ready(function(){
                cache: false,
                url: url,
                success: function (data) {
-                  $('#recipe-fav').click(function(something){
+                $('#dish-dish .thumbnail').on('click', "#recipe-fav-" + recipeID, function(something) {
+                  // $('#recipe-fav').click(function(something){
                     var ingredientsArray = [];
                     var name = data["Title"];
                     var directions = data["Instructions"];
@@ -50,7 +51,7 @@ $(document).ready(function(){
                       ingredientsArray.push(ingredient["Name"])
                     });
                     var stringIngredients = ingredientsArray.join(", ");
-                    $.post('/recipes', { name: name, directions: directions, category: category, ingredients: stringIngredients });
+                    $.post('/favorites', { name: name, directions: directions, category: category, ingredients: stringIngredients });
                   })
                   }
                });
