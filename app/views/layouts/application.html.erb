@@ -8,7 +8,7 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <header>
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -22,29 +22,29 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <% if current_user == nil %>
-        <li class="active"><%= link_to 'Sign-in', sign_in_path%><span class="sr-only">(current)</span></a></li>
-        <% else %>
-        <li><%= link_to 'Sign-out', sign_out_path, method: :delete%></li>
-        <li><%= link_to 'Favorite Recipes', favorites_path%></li>
-        <% end %>
+        <%# if current_user == nil %>
+        <li class="active"><%#= link_to 'Sign-in', sign_in_path%><span class="sr-only">(current)</span></a></li>
+        <%# else %>
+        <li><%#= link_to 'Sign-out', sign_out_path, method: :delete%></li>
+        <li><%#= link_to 'Favorite Recipes', favorites_path%></li>
+        <%# end %>
       <ul class="nav navbar-nav navbar-right">
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 </header>
-<body>
+<!-- <body>
 <div>
 <center>
-<% if current_user %>
+<%# if current_user %>
 <h5>You're signed in <%= current_user.name %></h5>
-<% end %>
+<%# end %> -->
 <%= yield %>
-</center>
+<!-- </center>
 </div>
 
-</body>
+</body> -->
 <footer>
 <p>Made with <3 by Dace, Jahde, Simone and Jack</p>
 </footer>
