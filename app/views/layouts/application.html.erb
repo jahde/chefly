@@ -8,6 +8,105 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <header>
+</header>
+
+<body id="careers" class="lightnav animsition  pace-done" style="animation-duration: 0.9s; -webkit-animation-duration: 0.9s; opacity: 1;"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="-webkit-transform: translate3d(100%, 0px, 0px); transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+
+    <!-- ============================ Off-canvas navigation ============================ -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling" style="margin-right: -256px;">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="img/global/close.png" alt="Close">
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="index.html" class="animsition-link" title="Image Hero">Start</a></li>
+            <li><a href="index-video.html" class="animsition-link" title="Video Hero">Video Alt</a></li>
+            <li><a href="company.html" class="animsition-link" title="Company">Company</a></li>
+            <li><a href="values.html" class="animsition-link" title="Values">Values</a></li>
+            <li><a href="team.html" class="animsition-link" title="Team">Team</a></li>
+            <li><a href="careers.html" class="animsition-link" title="Careers">Careers</a></li>
+            <!-- Dropdown Menu -->
+            <li>
+                <a class="sb-toggle-submenu">Portfolio<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <li><a href="portfolio.html" class="animsition-link" title="Filter Portfolio">Filter Portfolio</a></li>
+                    <li><a href="portfolio-item.html" class="animsition-link" title="Portfolio Item">Portfolio Item</a></li>
+                </ul>
+            </li>
+            <li><a href="faq.html" class="animsition-link" title="FAQ's">FAQ's</a></li>
+            <li><a href="proposal.html" class="animsition-link" title="Start a Project">Start a Project</a></li>
+            <li><a href="contact.html" class="animsition-link" title="Contact Us">Contact Us</a></li>
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="blog.html" class="animsition-link" title="T&amp;C's">Read the Blog</a></li>
+            <li><a href="style-guide.html" class="animsition-link" title="Style Guide">Theme Style Guide</a></li>
+        </ul>
+        <ul class="sb-menu secondary">
+            <li><a href="terms-conditions.html" class="animsition-link" title="T&amp;C's">Terms &amp; Conditions</a></li>
+            <li><a href="privacy-policy.html" class="animsition-link" title="Privacy Policy">Privacy Statement</a></li>
+            <li><a href="press-kit.html" class="animsition-link" title="Press Kit">Press Kit</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================ END Off-canvas navigation ============================ -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site" style="min-height: 392px;">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+         <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="index.html" title="Logo" class="animsition-link"><img src="img/global/logo.png" alt="Logo"></a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="index.html" class="animsition-link">Welcome to</a></li>
+                            <li class="nolink"><span>Chefly</span></li>
+                            <% if current_user == nil %>
+                            <li class="active">
+                              <%= link_to 'Sign-in', sign_in_path%>
+                              <!-- <span class="sr-only">(current)</span></a> -->
+                            </li>
+                          <% else %>
+                            <li>
+                              <%= link_to 'Sign-out', sign_out_path, method: :delete%>
+                            </li>
+                            <li>
+                              <%= link_to 'Favorite Recipes', favorites_path%>
+                            </li>
+                          <% end %>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">Learn More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="learn More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ END Header & Logo bar =========================== -->
+
+
 <!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -23,39 +122,32 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <%# if current_user == nil %>
-        <li class="active"><%#= link_to 'Sign-in', sign_in_path%><span class="sr-only">(current)</span></a></li>
+          <li class="active">
+            <%#= link_to 'Sign-in', sign_in_path%><span class="sr-only">(current)</span></a>
+          </li>
         <%# else %>
-        <li><%#= link_to 'Sign-out', sign_out_path, method: :delete%></li>
-        <li><%#= link_to 'Favorite Recipes', favorites_path%></li>
+          <li>
+            <%#= link_to 'Sign-out', sign_out_path, method: :delete%>
+          </li>
+          <li>
+            <%#= link_to 'Favorite Recipes', favorites_path%>
+          </li>
         <%# end %>
       <ul class="nav navbar-nav navbar-right">
       </ul>
     </div>
   </div>
-=======
-  <!-- <nav>
-    <ul class="nav">
-        <li><a href="index.html" class="animsition-link">Welcome</a></li>
-        <li class="nolink">We are a <span>media</span> company that <span>surpasses</span> expectations</li>
-        <li><a href="http://www.twitter.com/" title="Twitter" target="_blank"><i class="social-icon-twitter"></i></a></li>
-        <li><a href="http://www.facebook.com/" title="Facebook" target="_blank"><i class="social-icon-facebook"></i></a></li>
-        <li><a href="http://www.instagram.com/" title="Instagram" target="_blank"><i class="social-icon-instagram"></i></a></li>
-        <li class="nolink"><span>Index</span></li>
-    </ul>
->>>>>>> theme
-</nav> -->
-</header>
-<!-- <body>
-<div>
+
+
+
 <center>
 <%# if current_user %>
-<h5>You're signed in <%= current_user.name %></h5>
+<h5>You're signed in <%#= current_user.name %></h5>
 <%# end %> -->
 <%= yield %>
-<!-- </center>
-</div>
 
-</body> -->
+
+</body>
 <footer>
 <p>Made with <3 by Dace, Jahde, Simone and Jack</p>
 </footer>
