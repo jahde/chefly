@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
     end
   end
 
-  def create 
+  def create
     if Recipe.find_by(directions: params[:directions]) != nil || current_user.recipes.include?(Recipe.find_by(directions: params[:directions]))
      current_user.recipes << Recipe.find_by(description: params[:description])
     else
@@ -18,7 +18,6 @@ class RecipesController < ApplicationController
   end
 
   def youtube
-    binding.pry
     keyword = params[:search_keyword]
     @youtube = Youtube.run("#{keyword} recipe")
 

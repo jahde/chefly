@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :recipes, only: [:show, :index, :create]
+  resources :neighborhoods
 
   resources :restaurants do
     resources :dishes, only: [:show]
-    collection do 
+    collection do
       get "get_zip"
       post "get_zip"
     end
@@ -22,6 +23,5 @@ Rails.application.routes.draw do
   post '/sign-in', to: 'sessions#create'
   delete '/sign-out', to: 'sessions#destroy', as: 'sign_out'
 
- 
-  root 'restaurants#index'
+  root 'home#index'
 end

@@ -1,0 +1,4 @@
+Notes on Licenses for Alaska Theme, by ThemesCollective
+=============================================================
+
+Licenses are detailed at the top of each .js file in the [root]/js folder of your site. Please see the top of these .js files for licenses for any scripts which are not detailed here, or alternatively, (as some authors didn’t detail the license types in their plugin files), see the ‘includes.txt’ and ‘licenses.txt’ files in this folder for links the relevant authors websites.
