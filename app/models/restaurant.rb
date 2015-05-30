@@ -27,7 +27,7 @@ class Restaurant < ActiveRecord::Base
     @neighborhoods.each do |neighborhood|
       # value.each do |zip|
       neighborhood.zipcodes.each do |zip|
-        response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=#{ENV['JAHDE_LOCU']}&postal_code=#{zip}")
+        response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=#{ENV['DACE2_LOCU']}&postal_code=#{zip}")
         response["objects"].each do |restaurant|
           if (restaurant["has_menu"] == true) && restaurant["categories"].include?("restaurant")
             name = restaurant["name"]
@@ -58,7 +58,7 @@ class Restaurant < ActiveRecord::Base
 
 
   def get_dishes(menu_id, this_restaurant)
-     menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=#{ENV['JAHDE_LOCU']}")
+     menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=#{ENV['DACE2_LOCU']}")
         dish_name = ""
         description = ""
         menus["objects"].each do |menu|

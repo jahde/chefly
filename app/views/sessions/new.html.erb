@@ -1,22 +1,36 @@
-<% if @user.errors.any? %>
-<ul>
-  <% @user.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-</ul>
-<% end %>
-<h1>Sign in!</h1>
-<h2>Great things await...</h2>
+<section class="container boost">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+            <div class="titleblock text-center">
+                <i class="icon-basic-life-buoy"></i>
+                <h2>Need help?</h2>
+                <p>Don't worry, we've got you covered. Simply fill out the email form below and one of our support staff will reply within 2 hours.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<%= form_tag sign_in_path do %>
-  <div>
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
-  </div>
-  <div>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <%= submit_tag "Sign in!" %>
-  <%= link_to "Not a member yet? Sign up", sign_up_path %>
-<% end %>
+<!-- ============================ Hire us =========================== -->
+
+<section id="hire-us" class="beige-dk">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4 class="headspc">Ready to save recipes?</h4>
+                        <p class="copyspc">Sign up for an account and start saving your favorite recipes.</p>
+                    </div>
+                    <!-- Go to proposal.html link -->
+                    <div class="col-md-4">              
+                        <a href="proposal.html" class="custom-button animsition-link" title="Proposal">Sign up!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- ============================ END Hire us =========================== -->
+        
+
