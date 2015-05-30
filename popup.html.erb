@@ -1,0 +1,35 @@
+<style>
+  #slide_background {
+    transition: all 0.3s 0.3s;
+  }
+  #slide,
+  #slide_wrapper {
+    transition: all 0.3s ease-out;
+  }
+  #slide {
+    transform: translateX(0) translateY(-40%);
+  }
+  .popup_visible #slide {
+    transform: translateX(0) translateY(0);
+  }
+</style>
+
+<p class="lineheight">
+  <a class="initialism basic_open btn btn-success" href="#basic" data-popup-ordinal="0" id="open_14873886">Basic</a>
+  <a class="initialism fade_open btn btn-success" href="#fade" data-popup-ordinal="1" id="open_40740871">Fade</a>
+  <a class="initialism fadeandscale_open btn btn-success" href="#fadeandscale" data-popup-ordinal="1" id="open_52004617">Fade &amp; scale</a>
+  <button class="initialism slide_open btn btn-success" data-popup-ordinal="1" id="open_43784076">Slide</button>
+  <button class="initialism standalone_open btn btn-success" data-popup-ordinal="1" id="open_41806089">Stand alone</button>
+  <a class="initialism active_bg_open btn btn-success" href="#active_bg" data-popup-ordinal="1" id="open_55922699">Active background</a>
+  <a href="#my_tooltip" class="initialism my_tooltip_open btn btn-success" id="my_tooltip_open" data-popup-ordinal="1">Tooltip</a>
+  <button class="initialism fall_open btn btn-success" data-popup-ordinal="1" id="open_66549109">Callback events</button>
+  <button class="initialism other_open btn btn-success" data-popup-ordinal="1" id="open_43854147">…</button>
+</p>
+
+<script>
+  $('#slide').popup({
+    outline: true, // optional
+    focusdelay: 400, // optional
+    vertical: 'top' //optional
+  });
+</script>
