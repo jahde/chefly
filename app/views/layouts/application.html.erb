@@ -26,9 +26,9 @@
         <li class="active"><%= link_to 'Sign-in', sign_in_path%><span class="sr-only">(current)</span></a></li>
         <% else %>
         <li><%= link_to 'Sign-out', sign_out_path, method: :delete%></li>
+        <li><%= link_to 'Favorite Recipes', favorites_path%></li>
         <% end %>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
       </ul>
     </div>
   </div>

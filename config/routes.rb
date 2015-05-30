@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   get '/sign-up', to: 'users#new'
   post '/sign-up', to: 'users#create'
 
+  post '/favorites', to: 'recipes#create'
+  get '/favorites', to: 'recipes#favorites'
+  get '/youtube', to: 'recipes#youtube'
+
   get '/sign-in', to: 'sessions#new'
   post '/sign-in', to: 'sessions#create'
   delete '/sign-out', to: 'sessions#destroy', as: 'sign_out'
