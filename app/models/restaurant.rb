@@ -27,7 +27,7 @@ class Restaurant < ActiveRecord::Base
     @neighborhoods.each do |neighborhood|
       # value.each do |zip|
       neighborhood.zipcodes.each do |zip|
-        response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=#{ENV['API_KEY']}&postal_code=#{zip}")
+        response = HTTParty.get("http://api.locu.com/v1_0/venue/search/?api_key=#{ENV['JAHDE_LOCU']}&postal_code=#{zip}")
         response["objects"].each do |restaurant|
           if (restaurant["has_menu"] == true) && restaurant["categories"].include?("restaurant")
             name = restaurant["name"]
@@ -36,7 +36,7 @@ class Restaurant < ActiveRecord::Base
             this_restaurant = Restaurant.create(name: name,location: "#{zip}", neighborhood_id: neighborhood_id)
             menu_id = restaurant["id"]
             this_restaurant.get_dishes(menu_id, this_restaurant)
-          end 
+          end
         end
       end
     end
@@ -52,13 +52,13 @@ class Restaurant < ActiveRecord::Base
     # list
     @neighborhoods = Neighborhood.all
 
-    
+
     # We want all restaurants that belong to this neighborhood
   end
 
 
   def get_dishes(menu_id, this_restaurant)
-     menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=#{ENV['API_KEY']}")
+     menus = HTTParty.get("http://api.locu.com/v1_0/venue/#{menu_id}/?api_key=#{ENV['JAHDE_LOCU']}")
         dish_name = ""
         description = ""
         menus["objects"].each do |menu|
