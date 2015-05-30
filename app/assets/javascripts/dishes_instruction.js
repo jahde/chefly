@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
   $('#dish-dish .thumbnail').on('click', ".test-recipe-ingredient", function(something) {
-    debugger;
     var recipe_id = something.target["title"];
     fetchRecipeJson(recipe_id);
   });
