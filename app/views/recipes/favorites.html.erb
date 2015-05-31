@@ -1,15 +1,99 @@
-<div id="favorite-dish">
-<% @favorites.each do |favorite| %>
-<button class="favorite-recipe"><h4><%= favorite.name %></h4></button><br>
-<%= favorite.category %><br>
-<% if favorite.ingredients.count > 0 %>
-<ul>
-<% favorite.ingredients.each do |ingredient|%>
-<li><%= ingredient %></li>
-<% end %>
-</ul>
-<% end %>
-<%= favorite.directions %><br>
-<% end %>
-</div>
-<div id="test-vid"> </div>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Favorite Recipes</title>
+</head>
+<body>
+<!-- ============================ Page header =========================== -->
+
+<section id="page-header" class="element-img scrollme" style="background-image: url(<%= image_url("pancakes.jpg") %>)">
+    <div class="container">
+        <div class="row boost">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 vertical-align text-center">
+                <div class="animateme center-me" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="120" style="opacity: 0; transform: translate3d(0px, 120px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);">
+                    <h2><span><%= current_user.name %>'s Favorite Recipes</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="headerfade beige-dk" style="opacity: -1.66666666666667;"></div>
+</section>
+
+<!-- ============================ END Header & Logo bar =========================== -->
+
+<!-- ============================ Page tabs =========================== -->
+
+<section id="pagetabs" class="boost">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 titleblock text-center">
+                <p>&nbsp;</p>
+                <h2 class="section-heading">You Have <%= @favorites.count %> Saved Recipes</h2>
+                <p>This is a collection of your favorite recipes!
+            </div>
+        </div>
+        <% @favorites.each do |favorite| %>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;" >
+                        <img src=<%= favorite.photo %> class="img-responsive" alt="Image">
+                    
+                    </div>
+                    <div id="dish-favorites" class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" id="dish-dish", style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
+                        <div class="award thumbnail" id="favorites-page">
+                            <button><h4><%= favorite.name %></h4></button>
+
+                            <p>Category: <%= favorite.category %></p><br><br>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p> -->
+                            <center><button type='button' class='btn delete-favorite' id="<%= favorite.id %>">Delete This Favorite</button></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- // .col-md-8 col-md-offset-2 .col-lg-8 col-lg-offset-2 -->
+        </div>
+        <% end %>
+        <!-- // .row -->
+
+    </div>
+    <!-- // .container -->
+</section>
+<!-- // #pagetabs -->
+
+<!-- ============================ END Page tabs =========================== -->
+
+<!-- ============================ Hire us =========================== -->
+
+<section id="hire-us" class="beige-dk">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4 class="headspc">Ready to save recipes?</h4>
+                        <p class="copyspc">Sign up for an account and start saving your favorite recipes.</p>
+                    </div>
+                    <!-- Go to proposal.html link -->
+                    <div class="col-md-4">
+                        <a href="proposal.html" class="custom-button animsition-link" title="Proposal">Sign up!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ END Hire us =========================== -->
+</body>
+</html>
+
+<!-- added from modal -->
+<!-- reset.css, jquery-2.1.1.js, main.js, modernizr.js, velocity.min.js -->
+

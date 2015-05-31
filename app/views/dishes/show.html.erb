@@ -27,7 +27,6 @@
 
 <section id="pagetabs" class="boost">
     <div class="container">
-
         <div class="row">
             <div class="col-md-6 col-md-offset-3 titleblock text-center">
                 <p>&nbsp;</p>
@@ -43,8 +42,8 @@
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated dish-image" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
                         <!-- <img src="img/company/image-1.jpg" class="img-responsive" alt="Image"> -->
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" id="dish-dish", style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
-                        <div class="award thumbnail">
+                    <div id="dish-dish" class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated .thumbnail" data-wow-delay="0.4s" id="dish-dish", style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
+                        <div class="award-dishes">
                             <!-- <h4>Dish Recipe Title</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p> -->
@@ -57,7 +56,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated dish-image" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
-                        <div class="award">
+                        <div class="award-dishes">
 <!--                             <h4>Dish Recipe Title</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p> -->
@@ -69,7 +68,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated dish-image" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
-                        <div class="award">
+                        <div class="award-dishes">
           <!--                   <h4>Dish Recipe Title</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p> -->
@@ -81,7 +80,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated dish-image" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
-                        <div class="award">
+                        <div class="award-dishes">
        <!--                      <h4>Dish Recipe Title</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p> -->
@@ -93,7 +92,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated dish-image" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;">
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
-                        <div class="award">
+                        <div class="award-dishes">
 <!--                             <h4>Dish Recipe Title</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p> -->
@@ -113,8 +112,24 @@
 </section>
 <!-- // #pagetabs -->
 
-<!-- ============================ END Page tabs =========================== -->
 
+<!-- ============================ END Page tabs =========================== -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Your Favorite Was Saved!</h4>
+                </div>
+                <div class="modal-body">
+                   Click the "Favorite Recipes" tab to see all of your favorites 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- ============================ Hire us =========================== -->
 
 <section id="hire-us" class="beige-dk">

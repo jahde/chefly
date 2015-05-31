@@ -85,7 +85,7 @@
                               <%= link_to 'Sign-out', sign_out_path, method: :delete%>
                             </li>
                             <li>
-                              <%= link_to 'Favorite Recipes', favorites_path%>
+                              <%= link_to "(#{current_user.recipes.count}) Favorite Recipes", favorites_path%>
                             </li>
                           <% end %>
                         </ul>

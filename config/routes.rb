@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-  resources :recipes, only: [:show, :index, :create]
+  resources :recipes, only: [:show, :index, :create, :update]
   resources :neighborhoods
 
   resources :restaurants do
