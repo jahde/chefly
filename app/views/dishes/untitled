@@ -1,0 +1,10 @@
+<center id="test">
+  <div id="dish-dish">
+    <div class="thumbnail">
+    </div>
+  </div>
+</center>
+
+<div id="test-instructions"></div>
+<div id="test-ingredients"></div>
+<div id="test-vid"> </div>
