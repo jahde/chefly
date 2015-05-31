@@ -45,27 +45,6 @@
 
         <!-- ============================ END Video Hero =========================== -->
 
-        <!-- ============================ Intro =========================== -->
-
-        <!-- <section id="intro">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 opening-statement">
-                        <div class="col-md-4">
-                            <h3>OUR <span>mission</span> <span class="popovers pagehelp" data-trigger="hover" data-container="body" data-placement="bottom" data-toggle="popover" title="" data-content="Add some additional info in a popover feature here. Always good if you need extra areas for clarity." data-original-title="Our Mission"><img src="img/home/help.png" alt="Bronze Help"></span></h3>
-                        </div>
-                        <div class="col-md-8">
-                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.</p>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- ============================ END Intro =========================== -->
-
         <!-- ============================ Featured =========================== -->
 
         <section id="featured" class="no-top-padding">
@@ -73,7 +52,7 @@
         <div class="row">
             <div class="col-md-12 titleblock text-center">
                 <p>&nbsp;</p>
-                <i class="icon-basic-book-pencil"></i>
+                <%= image_tag("city.png", height: 100, class: "icon") %>
                 <h2>Select a Neighborhood</h2>
                 <p>For local restaurants and their menus</p>
             </div>
@@ -146,36 +125,10 @@
                             </div>
                         </div>
                         <div class="row partition">
-                            <div class="col-xs-2">
-                                <i class="icon-basic-question"></i>
-                            </div>
-                            <div class="col-xs-10">
+                            <div class="col-xs-12">
                                 <hr>
                             </div>
                         </div>
-                        <div class="row boxes">
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; -webkit-animation-delay: 0.3s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp;">
-                                <i class="icon-basic-server-cloud"></i>
-                                <h4>Email Support</h4>
-                                <p>Vehicula ac odio hac, purus iaculis pretium vivamus venenatis risus eros per. Sed pretium. Rutrum praesent sed mi commodo etiam.</p>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; -webkit-animation-delay: 0.6s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp;">
-                                <i class="icon-basic-picture"></i>
-                                <h4>Help Center</h4>
-                                <p>Mi turpis rhoncus commodo hendrerit volutpat elementum. Tortor. Pellentesque purus varius. Sagittis ac nec dictumst torquent diam.</p>
-                            </div>
-                        </div>
-                        <div class="row boxes">
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; -webkit-animation-delay: 0.3s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp;">
-                                <i class="icon-basic-map"></i>
-                                <h4>Community Forum</h4>
-                                <p>Nascetur parturient. Curae; volutpat condimentum magnis quisque senectus natoque torquent euismod gravida vel, tempor, fusce quis dis hac.</p>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; -webkit-animation-delay: 0.6s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp;">
-                                <i class="icon-basic-laptop"></i>
-                                <h4>Live Support</h4>
-                                <p>Montes varius mauris nec dapibus nisi sollicitudin mus suscipit magna pretium gravida suspendisse semper leo molestie metus tincidunt Aliquam nunc.</p>
-                            </div>
                         </div>
                         <!-- // .row-->
                     </div>
@@ -188,71 +141,6 @@
 
         <!-- ============================ END Services =========================== -->
 
-        <!-- ============================ Image Slider =========================== -->
-
-        <section id="imagefade" class="slider">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
-                        <img src="img/home/section-slider/slide1.jpg" alt="Slide One" draggable="false">
-                        <div class="flex-caption">
-                            <h4>Alaska includes a <span>full-responsive</span> slider.</h4>
-                            <p>A really cool slider that makes for good design and browser compatibility.</p>
-                        </div>
-                    </li>
-                    <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
-                        <img src="img/home/section-slider/slide2.jpg" alt="Slide Two" draggable="false">
-                        <div class="flex-caption">
-                            <h4>It's easily <span>editable</span>, and has an array of <span>different</span> controls.</h4>
-                        </div>
-                    </li>
-                    <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
-                        <img src="img/home/section-slider/slide3.jpg" alt="Slide Three" draggable="false">
-                        <div class="flex-caption">
-                            <h4>The combination of <span>image</span> and <span>text</span> adds context for your visitors.</h4>
-                            <p>Images with text is proven to boost conversion rates significantly, and adds context to the service of product.</p>
-                        </div>
-                    </li>
-                </ul>
-            <ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="">2</a></li><li><a class="flex-active">3</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="#"></a></li><li><a class="flex-next" href="#"></a></li></ul></div>
-        </section>
-
-        <!-- ============================ END Image Slider =========================== -->
-
-        <!-- ============================ Figures =========================== -->
-
-        <section id="figures" class="beige-dk">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; -webkit-animation-delay: 0.2s; animation-name: none; -webkit-animation-name: none;">
-                        <i class="icon-basic-picture"></i>
-                        <h4 class="white-text">Super-fast</h4>
-                        <p>Photo Sharing Service</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: none; -webkit-animation-name: none;">
-                        <i class="icon-basic-chronometer"></i>
-                        <h4 class="white-text">Delivery</h4>
-                        <p>Just in Time Delivery</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; -webkit-animation-delay: 0.6s; animation-name: none; -webkit-animation-name: none;">
-                        <i class="icon-basic-server2"></i>
-                        <h4 class="white-text">Cloud</h4>
-                        <p>Secure Cloud Storage</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.8s" style="visibility: hidden; animation-delay: 0.8s; -webkit-animation-delay: 0.8s; animation-name: none; -webkit-animation-name: none;">
-                        <i class="icon-basic-webpage-img-txt"></i>
-                        <h4 class="white-text">CRM</h4>
-                        <p>Customer Management</p>
-                    </div>
-                </div>
-                <!-- CALL TO ACTION -->
-                <div class="figures-footer text-center">
-                    <h6>Read more about our services - <a href="company.html" class="strong animsition-link">Get Started Now »</a></h6>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================ END Figures =========================== -->
 
         <!-- ============================ Process =========================== -->
 
@@ -262,11 +150,10 @@
                     <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; -webkit-animation-delay: 0.3s; animation-name: none; -webkit-animation-name: none;">
                         <div class="row">
                             <div class="col-md-2 text-center">
-                                <i class="icon-basic-accelerator"></i>
+                                <%= image_tag("chef.png", height: 100, class: "icon") %>
                             </div>
                             <div class="col-md-10">
-                                <h3>OUR <span>design</span> PROCESS</h3>
-                                <p>Here's how our typical business process works with new customers:</p>
+                                <h3>How to use <span>Chefly</span></h3>
                                 <hr>
                             </div>
                         </div>
@@ -276,9 +163,9 @@
                     <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
                         <div class="timeline-centered">
                             <div class="line"></div>
-                            <div class="present">Client Meeting</div>
+                            <div class="present">Visit Chefly</div>
                             <div class="dot_tp"></div>
-                            <div class="born">Delivery</div>
+                            <div class="born">Enjoy your meal</div>
                             <div class="dot_bt"></div>
                             <div class="timeline-entry">
                                 <div class="timeline-entry-inner">
@@ -286,7 +173,7 @@
                                         <span class="number">1</span>
                                     </div>
                                     <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; -webkit-animation-delay: 0.2s; animation-name: none; -webkit-animation-name: none;">
-                                        <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise.</p>
+                                        <p>Select a neighborhood</p>
                                     </div>
                                 </div>
                             </div>
@@ -296,7 +183,7 @@
                                         <span class="number">2</span>
                                     </div>
                                     <div class="timeline-label wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: none; -webkit-animation-name: none;">
-                                        <p>You have a meeting at Laborator Office Today.</p>
+                                        <p>Choose a restaurant from that neighborhood</p>
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +193,7 @@
                                         <span class="number">3</span>
                                     </div>
                                     <div class="timeline-label wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; -webkit-animation-delay: 0.6s; animation-name: none; -webkit-animation-name: none;">
-                                        <p>Great place, feeling like in home.</p>
+                                        <p>Select an item from that restaurant's menu</p>
                                     </div>
                                 </div>
                             </div>
@@ -316,7 +203,7 @@
                                         <span class="number">4</span>
                                     </div>
                                     <div class="timeline-label wow fadeInUp" data-wow-delay="0.8s" style="visibility: hidden; animation-delay: 0.8s; -webkit-animation-delay: 0.8s; animation-name: none; -webkit-animation-name: none;">
-                                        <p> Pianoforte principles our unaffected not for astonished travelling are particular.</p>
+                                        <p> Click on a menu item to see a similar recipe for that dish</p>
                                     </div>
                                 </div>
                             </div>
@@ -329,171 +216,6 @@
         </section>
 
         <!-- ============================ END Process =========================== -->
-
-        <!-- ============================ Overview =========================== -->
-
-        <section id="overview">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 element-img overview-img wow fadeInLeft" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; -webkit-animation-delay: 0.5s; animation-name: none; -webkit-animation-name: none; background-image: url(file:///Users/dace/chefly/vendor/assets/alaska-v1.0.2/theme/img/home/box1.jpg);"></div>
-                    <div class="col-md-6 overview-text vertical-align wow fadeInRight" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; -webkit-animation-delay: 0.5s; animation-name: none; -webkit-animation-name: none;">
-                        <div class="center-me">
-                            <h4>A Team that Collaborates</h4>
-                            <p>Our team consist of the best talent in town, and we are always open to working with like-minded individuals that want to go the extra-mile to get things done with the up-most expertise &amp; skill.</p>
-                            <a href="careers.html" class="custom-button animsition-link">Open Positions</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================ END Overview =========================== -->
-
-        <!-- ============================ Ajax Mailchimp sign-up form =========================== -->
-
-        <section id="mailinglist">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-6 col-lg-offset-3">
-                        <i class="icon-basic-mail"></i>
-                        <h4>Join our <span>mailing</span> list.</h4>
-                        <hr class="title-accent">
-                        <p>Ajax powered signup form for Mailchimp, lets users subscribe without navigating away from the page!</p>
-                        <!-- Ajax Mailchimp signup form -->
-                        <form id="mc-form" novalidate="true">
-                            <input id="mc-email" type="email" class="form-control" placeholder="Enter Email Address" name="EMAIL">
-                            <button type="submit" class="btn signup">Register</button>
-                            <label for="mc-email" class="status"></label>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================ END Ajax Mailchimp sign-up form =========================== -->
-
-        <!-- ============================ Sponsors =========================== -->
-
-        <section id="companies">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="row">
-                            <div class="col-xs-4 col-sm-2">
-                                <img src="img/home/sponsor-1.png" class="img-responsive" alt="Official Sponsor">
-                            </div>
-                            <div class="col-xs-4 col-sm-2">
-                                <img src="img/home/sponsor-2.png" class="img-responsive" alt="Official Sponsor">
-                            </div>
-                            <div class="col-xs-4 col-sm-2">
-                                <img src="img/home/sponsor-3.png" class="img-responsive" alt="Official Sponsor">
-                            </div>
-                            <div class="col-xs-4 col-sm-2">
-                                <img src="img/home/sponsor-4.png" class="img-responsive" alt="Official Sponsor">
-                            </div>
-                            <div class="col-xs-4 col-sm-2">
-                                <img src="img/home/sponsor-5.png" class="img-responsive" alt="Official Sponsor">
-                            </div>
-                            <div class="col-xs-4 col-sm-2">
-                                <img src="img/home/sponsor-6.png" class="img-responsive" alt="Official Sponsor">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================ END Sponsors =========================== -->
-
-        <!-- ============================ Footer =========================== -->
-
-        <footer>
-            <div class="container">
-                <div class="row footer-top">
-                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
-                        <ul class="f_grid1">
-                            <li>
-                                <div class="extra-wrap">
-                                    <h5>Address</h5>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </li>
-                        </ul>
-                        <p class="m_14">aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
-                        <div class="address">
-                            <p><i class="icon-basic-geolocalize-01"></i> 500 Lorem Ipsum Dolor Sit,</p>
-                            <p><i class="icon-basic-life-buoy"></i> Phone:(00) 222 666 444</p>
-                            <p><i class="icon-basic-mail-multiple"></i> Email: <span>help[at]email.com</span></p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
-                        <ul class="f_grid1">
-                            <li>
-                                <div class="extra-wrap">
-                                    <h5>Snapshot</h5>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </li>
-                        </ul>
-                        <p class="m_14">aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commod consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
-                        <ul class="f_grid1">
-                            <li>
-                                <div class="extra-wrap">
-                                    <h5>Quick Links</h5>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </li>
-                        </ul>
-                        <div class="footer_lists">
-                            <ul class="list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Screenshots</a></li>
-                                <li><a href="#">About</a></li>
-                            </ul>
-                            <ul class="list1">
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">figures</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
-                        <ul class="f_grid1">
-                            <li>
-                                <div class="extra-wrap">
-                                    <h5>Just Another Area</h5>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </li>
-                        </ul>
-                        <p class="m_14">Another area to add some of your most vital content or links. You can use this area to show any content globally across the site.</p>
-                    </div>
-                </div>
-                <div class="footer_bottom">
-                    <div class="copy">
-                        <p>
-                            © 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>-2015, Company. All Rights Reserved.
-                        </p>
-                    </div>
-                    <div class="social">
-                        <ul>
-                            <li><a href="http://twitter.com/" target="_blank"><i class="social-icon-twitter"></i></a></li>
-                            <li><a href="http://facebook.com/" target="_blank"><i class="social-icon-facebook"></i></a></li>
-                            <li><a href="http://instagram.com/" target="_blank"><i class="social-icon-instagram"></i></a></li>
-                            <li><a href="http://linkedin.com/" target="_blank"><i class="social-icon-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- ============================ END Footer =========================== -->
 
         <!-- //////////////////////////////////////////////////////////// -->
         <!-- Load our scripts -->

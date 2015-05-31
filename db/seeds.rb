@@ -10,7 +10,7 @@ Restaurant.data_dump
 
 Neighborhood.create([
 
-  { name: "Harlem (Central)",
+  { name: "Central Harlem",
     zipcodes: [10026, 10027, 10030, 10037, 10039],
     image_url: "harlem_central.jpg"
   },
@@ -20,7 +20,7 @@ Neighborhood.create([
     image_url: "chelsea.jpg"
   },
 
-  { name: "Harlem (East)",
+  { name: "East Harlem",
     zipcodes: [10029, 10035],
     image_url: "harlem_east.jpg"
   },

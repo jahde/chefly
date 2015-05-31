@@ -22,7 +22,7 @@
 /* Some Style from the Bootstrap Default Theme */
 body {
   padding-top: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -37,4 +37,35 @@ body {
 
 .thumbnail > img, .thumbnail a > img {
   max-width: 500px;
+}
+
+div .titleblock {
+  padding: 50px 0px 50px 0px;
+}
+
+.icon-plate {
+  margin: 0px 0px 50px 0px;
+}
+
+div .col-lg-offset-1 {
+  padding-bottom: 130px;
+}
+
+div .row {
+  text-align: center;
+}
+
+footer p,
+footer h5,
+footer li {
+  text-align: left;
+}
+
+.pi {
+  color: #fff;
+}
+
+p .pi > a:link,
+p .pi {
+  color: #fff
 }
