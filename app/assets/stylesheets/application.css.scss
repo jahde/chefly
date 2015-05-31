@@ -22,7 +22,7 @@
 /* Some Style from the Bootstrap Default Theme */
 body {
   padding-top: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -49,4 +49,14 @@ div .titleblock {
 
 div .col-lg-offset-1 {
   padding-bottom: 130px;
+}
+
+div .row {
+  text-align: center;
+}
+
+footer p,
+footer h5,
+footer li {
+  text-align: left;
 }
