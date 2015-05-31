@@ -3,7 +3,6 @@ $(document).ready(function(){
 
   // $('#favorite-dish').on('click', ".favorite-recipes", function(something) {
   $('button').click(function(something) {
-    debugger;
     var txt = $(something.target).text();
     ajaxCall(txt);
   });

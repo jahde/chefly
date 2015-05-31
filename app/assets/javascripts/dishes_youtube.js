@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
 
-  $('#dish-dish .thumbnail').on('click', ".test-recipe-ingredient", function(something) {
+  $('.award').on('click', ".test-recipe-ingredient", function(something) {
     var txt = $(something.target).text();
+    debugger;
     ajaxCall(txt);
   });
 

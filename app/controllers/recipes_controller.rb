@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
   end
 
   def youtube
+    binding.pry
     keyword = params[:search_keyword]
     @youtube = Youtube.run("#{keyword} recipe")
 

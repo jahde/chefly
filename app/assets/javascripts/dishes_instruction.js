@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
-  $('#dish-dish .thumbnail').on('click', ".test-recipe-ingredient", function(something) {
+  $('.award').on('click', '.test-recipe-ingredient', function(something) {
     var recipe_id = something.target["title"];
+    // add for recipe button
+    $(something.target.parentNode.parentNode.parentNode.parentNode.parentNode.firstElementChild.children[1].children[1]).addClass(recipe_id)
+
+    // add for modal button
+    $(something.target.parentNode.parentNode.parentNode.parentNode.parentNode.firstElementChild.children[0].children[0]).addClass(recipe_id)
     fetchRecipeJson(recipe_id);
   });
 
@@ -15,23 +20,25 @@ $(document).ready(function(){
   });
 
   function fetchRecipeJson(iD) {
-    var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
-    var recipeID = iD;
-    var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
+    var apiKey = "dvxW73xq8iT64kItLgiQfPb2Fo356753";
+    var url = "http://api.bigoven.com/recipe/" + iD + "?api_key="+apiKey;
     $.ajax({
      type: "GET",
      dataType: 'json',
      cache: false,
      url: url,
      success: function(data) {
+      var recipe_class = data["RecipeID"]
       var instructions = data["Instructions"];
       var ingredients = data["Ingredients"];
-              $('#test-instructions').html("<p>"+instructions+"</p>");
+              // $(recipe_class).html("<p>"+instructions+"</p>");
               var list = [];
               ingredients.forEach(function(object){
                 list.push(object["Name"]);
               })
-              $('#test-ingredients').html("<p>"+list.join(", ")+"</p>");
+
+              $("div."+recipe_class).html("<p>"+instructions+"\n\n"+list.join(", ")+"</p>");
+              $("a."+recipe_class).click();
             }
           });
   }

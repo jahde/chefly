@@ -1,7 +1,7 @@
 // test
 $(document).ready(function(){
   function getRecipeJson() {
-          var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
+          var apiKey = "dvxW73xq8iT64kItLgiQfPb2Fo356753";
           var titleKeyword = $('h2 span').text().toLowerCase();
           var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&any_kw="
                     + titleKeyword
@@ -18,7 +18,7 @@ $(document).ready(function(){
                     var recipe_id = data.Results[i]["RecipeID"];
                     recipe_list.push(data.Results[i]["RecipeID"]);
 
-                    $($('.award')[i]).append("<button class='test-recipe-ingredient'><h4 title="+recipe_id+">"+data.Results[i]["Title"]+"</button><br>");
+                    $($('.award')[i]).append("<button class='test-recipe-ingredient' data-type='modal-trigger' id='"+recipe_id+"'><h4 title="+recipe_id+">"+data.Results[i]["Title"]+"</button><br>");
                     $($('.award')[i]).append("<br><button type='button' class='btn' id='recipe-fav-" + recipe_id + "'>Add Recipe</button>");
                     $($('.award')[i]).append("<p>Cuisine: "+data.Results[i]["Cuisine"]+"</p>");
                     $($('.award')[i]).append("<p>Category: "+data.Results[i]["Category"]+"</p>");
@@ -35,7 +35,7 @@ $(document).ready(function(){
       getRecipeJson();
 
       function fetchRecipeJson(iD) {
-      var apiKey = "dvxBm9UtLmVZby8Qvc1IO3i52o9Y1Dsj";
+      var apiKey = "dvxW73xq8iT64kItLgiQfPb2Fo356753";
       var recipeID = iD;
       var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
       $.ajax({
