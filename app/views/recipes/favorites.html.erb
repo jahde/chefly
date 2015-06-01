@@ -58,7 +58,14 @@
 
                             <div class="cd-modal-content col-xs-7">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
+                                    <% if favorite.ingredients.count > 0 %>
+                                        <% favorite.ingredients.each do |ingredient| %>
+                                            <%= ingredient %>
+                                        <% end %>
+                                    <% end %>
+
+                                    <%= favorite.directions  %>
+
                                 </p>
 
                             </div> <!-- cd-modal-content -->
@@ -75,8 +82,8 @@
 
                     </div>
                     <div id="dish-favorites" class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" id="dish-dish", style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
-                        <div class="award thumbnail" id="favorites-page">
-                            <button class="test-recipe-ingredient"><h4><%= favorite.name %></h4></button>
+                        <div class="award thumbnail fav-page" id="favorites-page">
+                            <button class="test-recipe-ingredient-fav"><h4><%= favorite.name %></h4></button>
 
                             <p>Category: <%= favorite.category %></p><br><br>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
