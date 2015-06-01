@@ -151,7 +151,14 @@ section {
 	background-color: #fff;
 	position: relative;
 	padding-top: 60px;
-	/*z-index: 4;*/
+	z-index: 4;
+}
+
+section .home {
+	background-color: #fff;
+	position: relative;
+	padding-top: 60px;
+	z-index: 4;
 }
 a,
 a:hover,
