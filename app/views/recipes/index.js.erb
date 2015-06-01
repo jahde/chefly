@@ -1,4 +1,6 @@
 var youtube = "<%= @youtube %>";
+var recipe_id = "<%= @recipe_id %>";
+var recipe_num = "<%= @recipe_num %>";
 
 // var id = getID(youtube);
 var id = (function getID(iframe){
@@ -8,6 +10,6 @@ var id = (function getID(iframe){
 
 })(youtube);
 
-
-$('#test-vid').html('<iframe id="ytplayer" width="500" height="350" src="//www.youtube.com/' + id[0] +'" frameborder="0" allowfullscreen></iframe>');
+$("."+recipe_id).html('<iframe id="ytplayer" width="500" height="350" src="//www.youtube.com/' + id[0] +'" frameborder="0" allowfullscreen></iframe>');
+// $("a."+recipe_num).click();
 

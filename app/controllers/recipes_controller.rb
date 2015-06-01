@@ -3,6 +3,8 @@ class RecipesController < ApplicationController
 
   def index
     keyword = params[:search_keyword]
+    @recipe_id = params[:recipe_num]
+    @recipe_num = @recipe_id.split("-")[1]
     @youtube = Youtube.run("#{keyword} recipe")
     respond_to do |format|
       format.js
@@ -18,7 +20,6 @@ class RecipesController < ApplicationController
   end
 
   def youtube
-    binding.pry
     keyword = params[:search_keyword]
     @youtube = Youtube.run("#{keyword} recipe")
 
