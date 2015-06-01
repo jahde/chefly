@@ -1,6 +1,12 @@
 $(document).ready(function(){
 
 
+  $('#favorite-dish').on('click', ".favorite-recipes", function(something) {
+  $('button').click(function(something) {
+    var txt = $(something.target).text();
+    ajaxCall(txt);
+  });
+
   // $('#favorite-dish').on('click', ".favorite-recipes", function(something) {
   $('button').click(function(something) {
     var txt = $(something.target).text();

@@ -67,13 +67,15 @@
                 <div class="container">
                     <!-- Nav logo -->
                     <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link"><img src="img/global/logo.png" alt="Logo"></a>
+                        <!-- <a href="index.html" title="Logo" class="animsition-link"> --><%= image_tag("logo.png", alt: "logo", height: 20) %>
+                        <!-- </a> -->
                     </div>
                     <!-- // Nav logo -->
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">Welcome to</a></li>
+                            <li><a href="http://infinite-woodland-7224.herokuapp.com" class="animsition-link">Welcome to</a></li>
+
                             <li class="nolink"><span>Chefly</span></li>
                             <% if current_user == nil %>
                             <li class="active">
@@ -85,7 +87,7 @@
                               <%= link_to 'Sign-out', sign_out_path, method: :delete%>
                             </li>
                             <li>
-                              <%= link_to 'Favorite Recipes', favorites_path%>
+                              <%= link_to "(#{current_user.recipes.count}) Favorite Recipes", favorites_path%>
                             </li>
                           <% end %>
                         </ul>
@@ -93,7 +95,7 @@
                     <!--// Info-bar -->
                 </div>
                 <!-- // .container -->
-                <div class="learnmore sb-toggle-right">Learn More</div>
+                <div class="learnmore sb-toggle-right">Menu</div>
                 <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="learn More">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar before"></span>
@@ -107,48 +109,115 @@
         <!-- ============================ END Header & Logo bar =========================== -->
 
 
-<!-- <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Chefly</a>
-    </div>
+        <%= yield %>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <%# if current_user == nil %>
-          <li class="active">
-            <%#= link_to 'Sign-in', sign_in_path%><span class="sr-only">(current)</span></a>
-          </li>
-        <%# else %>
-          <li>
-            <%#= link_to 'Sign-out', sign_out_path, method: :delete%>
-          </li>
-          <li>
-            <%#= link_to 'Favorite Recipes', favorites_path%>
-          </li>
-        <%# end %>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
+
+       <!-- ============================ Footer =========================== -->
+
+        <footer>
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>Address</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <p class="m_14">aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                        <div class="address">
+                            <p><i class="icon-basic-geolocalize-01"></i> 500 Lorem Ipsum Dolor Sit,</p>
+                            <p><i class="icon-basic-life-buoy"></i> Phone:(00) 222 666 444</p>
+                            <p><i class="icon-basic-mail-multiple"></i> Email: <span>help[at]email.com</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>About</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <p class="m_14">This is a true story of four programmers picked to make an app, work together and present in front of their class. Find out what happens when people stop being polite and start getting real.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>Quick Links</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <div class="footer_lists">
+                            <ul class="list">
+                                <li><a href="neighborhoods/1">Central Harlem</a></li>
+                                <li><a href="neighborhoods/2">Chelsea</a></li>
+                                <li><a href="neighborhoods/3">East Harlem</a></li>
+                                <li><a href="neighborhoods/4">Gramercy</a></li>
+                                <li><a href="neighborhoods/9">Upper West Side</a></li>
+
+                            </ul>
+                            <ul class="list1">
+                                <li><a href="neighborhoods/5">Soho</a></li>
+                                <li><a href="neighborhoods/6">Lower Manhattan</a></li>
+                                <li><a href="neighborhoods/7">Lower East Side</a></li>
+                                <li><a href="neighborhoods/9">Upper West Side</a></li>
+                                <li><a href="neighborhoods/10">Washington Heights</a></li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 footer_grid">
+                        <ul class="f_grid1">
+                            <li>
+                                <div class="extra-wrap">
+                                    <h5>Just Another Area</h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                        <p class="m_14">Another area to add some of your most vital content or links. You can use this area to show any content globally across the site.</p>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="copy">
+                        <p>
+                           Made with ♥ by Dace, Jahde, Simone and Jack.
+                        </p>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li><p class="pi"><a href="https://www.youtube.com/embed/46qKHq7REI4" target="_blank" class="pi">π</a></p></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- ============================ END Footer =========================== -->
+
+        <!-- //////////////////////////////////////////////////////////// -->
+        <!-- Load our scripts -->
+
+        <script src="js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load first -->
+        <script src="js/scripts.js"></script><!-- Theme scripts -->
+
+    </div>
+    <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
+
+
+  <div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 9px; z-index: 100; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 1; display: block; background: rgba(255, 255, 255, 0.701961);">
+    <div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 9px; height: 46px; border: 0px solid rgb(32, 32, 32); border-radius: 5px; background-color: rgb(21, 21, 21); background-clip: padding-box;">
     </div>
   </div>
 
 
-
-<center>
-<%# if current_user %>
-<h5>You're signed in <%#= current_user.name %></h5>
-<%# end %> -->
-<%= yield %>
-
-
 </body>
-<footer>
-<p>Made with <3 by Dace, Jahde, Simone and Jack</p>
-</footer>
 </html>
+
