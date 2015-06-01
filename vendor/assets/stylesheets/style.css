@@ -154,6 +154,11 @@ section {
 	/*z-index: 4;*/
 }
 
+/* for the chefly process homepage section */
+#process {
+	z-index: 4;
+}
+
 section .home {
 	background-color: #fff;
 	position: relative;
