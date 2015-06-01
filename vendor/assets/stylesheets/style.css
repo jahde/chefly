@@ -151,7 +151,7 @@ section {
 	background-color: #fff;
 	position: relative;
 	padding-top: 60px;
-	z-index: 4;
+	/*z-index: 4;*/
 }
 a,
 a:hover,
@@ -497,7 +497,7 @@ a.custom-button span {
 	top: 50%;
 	margin-top: -15px;
 	left: 30px;
-}	
+}
 .logo img {
 	display:block;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -523,7 +523,7 @@ a.custom-button span {
 .navbar .nav {
 	width:100%;
 	text-align:center;
-	height:60px;		
+	height:60px;
 }
 .navbar .nav > li {
 	float:none;
@@ -610,7 +610,7 @@ nav i.icon-basic-eye {
 /* Continue Navigation... */
 .navbar .nav > li:last-child > a,
 .navbar .nav > li:last-child {
-	border-right:none;	
+	border-right:none;
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover,
@@ -618,7 +618,7 @@ nav i.icon-basic-eye {
 	color:#777;
 }
 @media only screen and (max-width: 1024px) {
-	
+
 	.logo img:hover {
 		top:0px;
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -626,12 +626,12 @@ nav i.icon-basic-eye {
 		-moz-opacity: 1;
 		opacity: 1;
 	}
-	
+
 	.navbar-inner {
 		padding:0!important;
 		height:60px;
 	}
-	
+
 	.navbar nav {
 		display: none
 	}
@@ -1333,8 +1333,8 @@ span.sb-caret { /* Caret Down */
 /* *******************************************************
 * Blog post comments, Boostrap style, (not Disqus)
 ******************************************************* */
-#comments-tb .login { 
-    position: absolute; 
+#comments-tb .login {
+    position: absolute;
     top: -3px;
     right: 0;
 }
@@ -1350,8 +1350,8 @@ span.sb-caret { /* Caret Down */
 }
 #comments-tb .media .media-object { max-width: 60px; }
 #comments-tb .media-body { position: relative; }
-#comments-tb .media-date { 
-    position: absolute; 
+#comments-tb .media-date {
+    position: absolute;
     right: 25px;
     top: 15px;
 }
@@ -1361,9 +1361,9 @@ span.sb-caret { /* Caret Down */
 }
 #comments-tb .media-date li { padding: 0; }
 #comments-tb .media-date li:first-child:before { content: ''; }
-#comments-tb .media-date li:before { 
-    content: '.'; 
-    margin-left: -2px; 
+#comments-tb .media-date li:before {
+    content: '.';
+    margin-left: -2px;
     margin-right: 2px;
 }
 #comments-tb .media-comment { margin-bottom: 20px; }
@@ -2295,7 +2295,7 @@ ul.page-nav i {
   li.support:hover {
     border: none !important;
   }
-  
+
   #sidebar.affix {
     position: fixed;
     top: 0;
@@ -2615,7 +2615,7 @@ ul.page-nav i {
 	max-width:100%;
 	position: relative;
 }
-@media only screen and (max-width: 767px) {  
+@media only screen and (max-width: 767px) {
   #projects .filter-item {
     width:50%;
   }

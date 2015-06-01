@@ -39,6 +39,36 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
+                <div class="recipe-class">
+                    <!-- start modal -->
+                    <section class="cd-section">
+
+                        <div class="cd-modal-action">
+                            <a href="#0" class="btn" data-type="modal-trigger">+++</a>
+                            <span class="cd-modal-bg"></span>
+                        </div>
+
+                        <div class="cd-modal">
+
+                            <div class="col-xs-5">
+                                <iframe width="500" align="left" height="350"
+                                src="http://www.youtube.com/embed/Ldw3qptYWeA?autoplay=0">
+                                </iframe>
+                            </div>
+
+                            <div class="cd-modal-content col-xs-7">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
+                                </p>
+
+                            </div> <!-- cd-modal-content -->
+
+                        </div> <!-- cd-modal -->
+
+                        <a href="#0" class="cd-modal-close">Close</a>
+                    </section> <!-- .cd-section -->
+                    <!-- end modal -->
+
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft;" >
                         <img src=<%= favorite.photo %> class="img-responsive" alt="Image">
@@ -46,7 +76,7 @@
                     </div>
                     <div id="dish-favorites" class="col-sm-6 col-md-6 col-lg-6 wow fadeInRight animated" data-wow-delay="0.4s" id="dish-dish", style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInRight; -webkit-animation-name: fadeInRight;">
                         <div class="award thumbnail" id="favorites-page">
-                            <button><h4><%= favorite.name %></h4></button>
+                            <button class="test-recipe-ingredient"><h4><%= favorite.name %></h4></button>
 
                             <p>Category: <%= favorite.category %></p><br><br>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -55,6 +85,8 @@
                         </div>
                     </div>
                 </div>
+                </div>
+
             </div>
 
             <!-- // .col-md-8 col-md-offset-2 .col-lg-8 col-lg-offset-2 -->

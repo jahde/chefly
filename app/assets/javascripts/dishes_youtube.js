@@ -13,7 +13,6 @@ $(document).ready(function(){
     } else if($(something.target).is("button")) {
       recipe_id = something.target.id;
       youtube_recipe = "youtube-"+recipe_id;
-      debugger;
       $(something.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.children[1].firstElementChild).addClass(youtube_recipe)
     }
 
