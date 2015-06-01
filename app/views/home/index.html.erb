@@ -59,15 +59,15 @@
         </div>
     </div>
     <div class="container-fluid">
-        
+
         <div class="row">
           <% @neighborhoods.each do |neighborhood| %>
             <% if neighborhood.id == 4 || neighborhood.id == 10 %>
-            
+
             <!-- RECTANGLE NEIGHBORHOOD -->
-            
+
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 featured-item element-img wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; -webkit-animation-delay: 0.4s; animation-name: fadeInLeft; -webkit-animation-name: fadeInLeft; background-image: url(<%= image_url(neighborhood.image_url) %>);">
-                
+
                 <%= link_to(neighborhood, title: neighborhood.name, class:"meta animsition-link") do %>
                     <span class="title"><%= neighborhood.name %></span>
                     <hr class="byline-accent">
@@ -78,12 +78,12 @@
 
             <!-- SQUARE NEIGHBORHOOD -->
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 featured-item element-img wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; -webkit-animation-delay: 0.2s; animation-name: fadeInUp; -webkit-animation-name: fadeInUp; background-image: url(<%= image_url(neighborhood.image_url) %>);">
-                
+
                 <%= link_to(neighborhood, title: neighborhood.name, class:"meta animsition-link") do %>
                     <span class="title"><%= neighborhood.name %></span>
                     <hr class="byline-accent">
                 <% end %>
-            </div>            
+            </div>
             <% end %>
         <% end %>
         </div>
@@ -138,7 +138,7 @@
                 <!-- // .row-->
             </div>
             <!-- // .container-->
-        </section> 
+        </section>
 
         <!-- ============================ END Services =========================== -->
 
@@ -220,10 +220,10 @@
 
         <!-- //////////////////////////////////////////////////////////// -->
         <!-- Load our scripts -->
-        
+
         <!-- Resizable 'on-demand' full-height hero -->
         <script type="text/javascript">
-            
+
             var resizeHero = function () {
                 var hero = $(".cover,.heightblock"),
                     window1 = $(window);
@@ -231,9 +231,9 @@
                     "height": window1.height()
                 });
             };
-            
+
             resizeHero();
-            
+
             $(window).resize(function () {
                 resizeHero();
             });
@@ -283,25 +283,3 @@
 
 
 
-
-    
-
-<!-- <h1>Welcome to Chefly!</h1>
-<p>Cook like your favorite chef</p>
-<div>
-<%#= form_tag(controller: "restaurants", action: "get_zip", method: "get") do %>
-<%#= label_tag(:zip_code, "Neighborhoods") %>
-<%#= select_tag "neighborhood", "<option>Central Harlem</option><option>Chelsea</option><option>East Harlem</option><option>Gramercy</option><option>SoHo</option><option>Lower Manhattan</option><option>Lower East Side</option><option>Upper East Side</option><option>Upper West Side</option><option>Washington Heights</option>".html_safe %>
-<%#= submit_tag ("Search Restaurants in your neighborhood") %>
-<%# binding.pry %>
-<%# end %>
-</div>
-<ul>
-<%# @restaurants.each do |restaurant| %>
-<%#= link_to "/restaurants/#{restaurant.id}" do %>
-  <h5><%#= restaurant.name %></h5>
-<%# end %>
-<p><%#= restaurant.location %><br><br><p>
-<%# end %>
-</ul>
- -->
