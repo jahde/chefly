@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require plugins.min
+//= require jquery.flexslider-min
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require_tree .
