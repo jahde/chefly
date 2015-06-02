@@ -3,7 +3,8 @@
 <head>
   <title>Chefly</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'vendor', media: 'all' %>
+  <%= javascript_include_tag 'vendor' %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
@@ -35,7 +36,7 @@
             <li><a href="contact.html" class="animsition-link" title="Contact Us">Upper West Side</a></li>
             <li><a href="contact.html" class="animsition-link" title="Contact Us">Washington Heights</a></li>
         </ul>
-        
+
     </div>
 
     <!-- ============================ END Off-canvas navigation ============================ -->
