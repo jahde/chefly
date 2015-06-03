@@ -13,5 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree ../../../vendor/assets/javascripts/.
+//= require modernizr
+//= require plugins.min
+//= require jquery.flexslider-min
+//= require jquery.fs.wallpaper
+//= require scripts
+//= require bootstrap.lightbox
+//= require html5shiv.min
+//= require jquery.easing.min
+//= require jquery.mixitup.min
+//= require main
+//= require respond.min
+//= require velocity.min
+//= require velocity.min
+//= require wow.min
+
 //= require_tree .
