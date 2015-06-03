@@ -3,8 +3,7 @@
 <head>
   <title>Chefly</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'vendor', media: 'all' %>
-  <%= javascript_include_tag 'vendor' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
@@ -25,16 +24,16 @@
         </div>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
-            <li><a href="index.html" class="animsition-link" title="Image Hero">Central Harlem</a></li>
-            <li><a href="index-video.html" class="animsition-link" title="Video Hero">Chelsea</a></li>
-            <li><a href="company.html" class="animsition-link" title="Company">East Harlem</a></li>
-            <li><a href="values.html" class="animsition-link" title="Values">Gramercy</a></li>
-            <li><a href="team.html" class="animsition-link" title="Team">Soho</a></li>
-            <li><a href="careers.html" class="animsition-link" title="Careers">Lower Manhattan</a></li>
-            <li><a href="faq.html" class="animsition-link" title="FAQ's">Lower East Side</a></li>
-            <li><a href="proposal.html" class="animsition-link" title="Start a Project">Upper East Side</a></li>
-            <li><a href="contact.html" class="animsition-link" title="Contact Us">Upper West Side</a></li>
-            <li><a href="contact.html" class="animsition-link" title="Contact Us">Washington Heights</a></li>
+            <li><a href="/neighborhoods/1" class="animsition-link" title="Image Hero">Central Harlem</a></li>
+            <li><a href="/neighborhoods/2" class="animsition-link" title="Video Hero">Chelsea</a></li>
+            <li><a href="/neighborhoods/3" class="animsition-link" title="Company">East Harlem</a></li>
+            <li><a href="/neighborhoods/4" class="animsition-link" title="Values">Gramercy</a></li>
+            <li><a href="/neighborhoods/5" class="animsition-link" title="Team">Soho</a></li>
+            <li><a href="/neighborhoods/6" class="animsition-link" title="Careers">Lower Manhattan</a></li>
+            <li><a href="/neighborhoods/7" class="animsition-link" title="FAQ's">Lower East Side</a></li>
+            <li><a href="/neighborhoods/8" class="animsition-link" title="Start a Project">Upper East Side</a></li>
+            <li><a href="/neighborhoods/9" class="animsition-link" title="Contact Us">Upper West Side</a></li>
+            <li><a href="/neighborhoods/10" class="animsition-link" title="Contact Us">Washington Heights</a></li>
         </ul>
 
     </div>

@@ -37,6 +37,7 @@ $(document).ready(function(){
                 list.push(object["Name"]);
               })
 
+              debugger;
               $("div."+recipe_class).html("<p>"+list.join(", ")+". "+"\n\n"+instructions+"</p>");
               $("a."+recipe_class).click();
             }

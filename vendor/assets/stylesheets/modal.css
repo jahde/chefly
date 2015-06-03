@@ -70,7 +70,7 @@ header h1 {
     padding: 4em 10%;
   }
   .cd-section p {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     line-height: 2;
   }
 }
@@ -124,6 +124,8 @@ header h1 {
   color: #ffffff;
   line-height: 1.6;
   margin: 2em 0;
+  padding-left: 10%;
+  padding-right: 5%;
 }
 .modal-is-visible .cd-modal {
   z-index: 1;
